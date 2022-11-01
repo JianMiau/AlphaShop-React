@@ -1,30 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
 import Header from './component/header/header';
 import Main from './component/main/main';
 import Footer from './component/footer/footer';
 import styled from 'styled-components';
 const AppStyle = styled.div`
-  text-align: center;
   box-sizing: border-box;
-  width: 100% ;
-  height: 1126px;
+  width: 100vw ;
   font-size: 62.5% ;
   margin: 0 ;
   padding: 0 ;
-  & .header {
+  .header {
     width: 100% ;
     height: 60px ;
-    border-bottom: 1px solid black ;
+    background-color: lightpink ;
+    box-sizing: inherit;
   }
-  & .main {
+  .main {
     width: 100% ;
     height: 782px ;
-     border-bottom: 1px solid black ;
+    background-color: lightgreen ;
+    box-sizing: inherit;
   }
-  & .footer {
+  .footer {
     width: 100% ;
     height: 284px ;
+    background-color: lightsalmon ;
+     box-sizing: inherit;
   }
 `
 
