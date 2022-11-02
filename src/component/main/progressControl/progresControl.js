@@ -2,14 +2,15 @@ import styled from "styled-components"
 import ProgressPhase from "./progressPhase"
 const ProgressStyle = styled.div`
 width: 100%;
+margin-top: 24px ;
 
 `
 
-function ProgressControl() {
+function ProgressControl(props) {
   return (
     <section className="progress-control-container">
       <ProgressStyle>
-        <ProgressPhase phase='adresss' nextBtn='下一步 &rarr;' />
+        <ProgressPhase step={1} phase='adresss' />
       </ProgressStyle>
     </section>
 
