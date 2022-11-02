@@ -3,8 +3,12 @@ import styled from "styled-components"
 import MainForm from './UserForm/MainForm'
 
 const FormStyle = styled.div`
+width: 100%;
 .register-container {
-  padding: 80px 0;
+  display: flex ;
+  width: 100% ;
+  flex-direction: column ;
+  padding: 3% 0;
 }
 
 .register-title{
@@ -20,7 +24,7 @@ function OutputForm(props) {
       <section className="register-container" data-phase="1" data-total-price="0">
         <h2 className="register-title">{props.title}</h2>
         <RegistStepper />
-        <MainForm title='寄送地址' />
+        <MainForm />
       </section>
     </FormStyle>
 

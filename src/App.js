@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const AppStyle = styled.div`
   box-sizing: border-box;
   width: 100vw ;
+  height: 100%;
   font-size: 62.5% ;
   margin: 0 ;
   padding: 0 ;
@@ -17,8 +18,8 @@ const AppStyle = styled.div`
   }
   .main {
     width: 100% ;
-    height: 782px ;
-    background-color: lightgreen ;
+    height: auto ;
+    background-color: #E5E5E5 ;
     box-sizing: inherit;
   }
   .footer {
