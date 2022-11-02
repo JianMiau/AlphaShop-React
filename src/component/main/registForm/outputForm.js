@@ -4,6 +4,7 @@ import MainForm from './UserForm/MainForm'
 
 const FormStyle = styled.div`
 width: 100%;
+height: 600px;
 .register-container {
   display: flex ;
   width: 100% ;

@@ -1,14 +1,13 @@
 import styled from "styled-components"
 import OutputForm from "./registForm/outputForm"
-import ShopCart from "./shopCart/shopCart"
 import ProgressControl from "./progressControl/progresControl"
 const MainStyle = styled.div`
 padding: 0 11.45% ;
 .main-container {
   width: 100% ;
   display: grid ;
-  grid-template-columns: 6fr minmax(125px,1fr) 4fr;
-  grid-template-rows: auto 200px ;
+  grid-template-columns: 6fr minmax(125px,1fr) minmax(400px,4fr);
+  grid-template-rows: 690px 200px ;
   column-gap: 30px;
   & .register-container {
     grid-column: 1/2 ;
@@ -33,7 +32,7 @@ export default function Main() {
         <div className="main-container">
           <OutputForm title='結帳' />
           <ProgressControl />
-          <ShopCart />
+          {/* <ShopCart /> */}
         </div>
       </div>
     </MainStyle>

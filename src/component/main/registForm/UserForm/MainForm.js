@@ -1,9 +1,10 @@
 
 import AddressForm from "./addressForm"
-import Input from "./input"
+import ShippingForm from "./shippingForm"
+import CreaditCardForm from "./creditCardFrom"
 import styled from "styled-components"
 const FormStyle = styled.div`
-width:100%;
+border-bottom: 1px solid lightgray;
 & .form-container {
   width: 100% ;
 }
@@ -13,6 +14,8 @@ function MainForm(props) {
     <FormStyle>
       <section className="form-container col col-12">
         <AddressForm />
+        {/* <ShippingForm /> */}
+        {/* <CreaditCardForm /> */}
       </section>
     </FormStyle>
   )

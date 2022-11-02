@@ -6,10 +6,14 @@ width: 100% ;
   justify-content: flex-end ;
 }
 & .next {
-  background-color: #FFC0CB ;
+  background-color: #F67599 ;
+  text-align: center ;
+  line-height: 46px ;
   width: 25% ;
-  border-radius: 15px;
+  height: 46px ;
+  border-radius: 8px;
   font-size: 1rem ;
+  margin-top: 24px ;
 }
 `
 
@@ -18,7 +22,7 @@ function ProgressPhase(props) {
     <ProgressStyle>
       <section className="button-group" data-phase={props.phase}>
         <button className="next">
-          <p>{props.nextBtn}</p>
+          {props.nextBtn}
           {/* <svg class="cursor-point">
             <use xlink:href="#svg-icon-right-arrow"></use>
           </svg> */}

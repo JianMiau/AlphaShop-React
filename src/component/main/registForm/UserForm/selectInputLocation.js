@@ -2,15 +2,25 @@ import styled from "styled-components"
 const InputStyle = styled.div`
 width: ${props => props.width}% ;
 .input-group {
+   box-sizing: border-box ;
   width: 100% ;
   display: flex ;
   flex-direction: column ;
   font-size: 1.8rem ;
-   padding: 10px ;
-    & select {
+  padding: 3% 0 ;
+   & .input-label {
+ font-size: 1.2rem;
+    font-weight: 700 ;
+  margin-bottom: 10px ;
+  color:#808080;
+ }
+  & select {
+    width: 95% ;
     font-size: 1.5rem ;
     border-radius: 10px ;
-    padding: 5px;
+    padding: 12px 16px;
+    height: 67px ;
+    margin-top: 6px ;
   }
   }
 
@@ -23,7 +33,7 @@ function SelectInputLocation(props) {
         <div className="input-label">{props.label}</div>
         <div className="select-container">
           <select required>
-            <option value="">請選擇縣市</option>
+            <option value="defult">請選擇縣市</option>
             <option value="KLU">基隆市</option>
             <option value="TPH">新北市</option>
             <option value="TPE">臺北市</option>

@@ -10,7 +10,7 @@ position: relative ;
     position: absolute ;
     width: 120px ;
     height: 2px ;
-    background-color: black ;
+    background-color: ${props => props.active ? 'black' : 'lightgrey'};
   }
 .progress-group {
   display: flex ;
@@ -25,14 +25,15 @@ position: relative ;
       height: 25px;
       border-radius: 50% ;
       text-align:center ;
-      background-color: black ;
-      color: white ;
+      background-color: ${props => props.active ? 'black' : 'lightgrey'};
+      color: white;
       margin-right: 5px ;
     }
   }
   & .progress-label {
     width: 80% ;
     text-align:center ;
+    color: ${props => (props.active ? 'black' : 'grey')};
   }
 }
 
@@ -40,7 +41,7 @@ position: relative ;
 
 export default function StepperBars(props) {
   return (
-    <StepperBarStyle>
+    <StepperBarStyle active={props.active}>
       <span className="progress-group" data-phase={props.phase}>
         <span className="progress-icon">
           <span className="text"><p>{props.stepNumber}</p></span>

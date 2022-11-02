@@ -9,7 +9,7 @@ function ProgressControl() {
   return (
     <section className="progress-control-container">
       <ProgressStyle>
-        <ProgressPhase phase='adresss' nextBtn='下一步' />
+        <ProgressPhase phase='adresss' nextBtn='下一步 &rarr;' />
       </ProgressStyle>
     </section>
 
