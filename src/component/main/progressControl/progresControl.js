@@ -10,7 +10,7 @@ function ProgressControl(props) {
   return (
     <section className="progress-control-container">
       <ProgressStyle>
-        <ProgressPhase step={1} phase='adresss' />
+        <ProgressPhase step={props.step} event={props.event} phase='adresss' />
       </ProgressStyle>
     </section>
 

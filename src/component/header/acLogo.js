@@ -11,6 +11,12 @@ const AClogoStyle = styled.div`
   .ac-logo {
     margin-right: 8px;
   }
+  @media screen and (max-width:1500px) {
+      right: 35%;
+  }
+   @media screen and (max-width:1300px) {
+      right: 0;
+  }
 }
 `
 

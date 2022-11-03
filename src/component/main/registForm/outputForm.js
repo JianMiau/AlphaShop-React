@@ -24,8 +24,8 @@ function OutputForm(props) {
     <FormStyle>
       <section className="register-container" data-phase="1" data-total-price="0">
         <h2 className="register-title">{props.title}</h2>
-        <RegistStepper />
-        <MainForm />
+        <RegistStepper step={props.step} />
+        <MainForm step={props.step} />
       </section>
     </FormStyle>
 

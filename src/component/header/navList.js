@@ -13,6 +13,9 @@ const NavListStyle = styled.div`
     font-size: 1.5rem ;
     color: black;
     text-decoration: none ;
+    @media screen and (max-width: 1200px) {
+      font-size: 1.0rem ; 
+    }
   }
 }
 `

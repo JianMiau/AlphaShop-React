@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import rightArrow from "../../icons/right-arrow.svg"
+import { useState } from "react"
 const ProgressStyle = styled.div`
 width: 100% ;
 & .button-group {
@@ -16,6 +17,9 @@ width: 100% ;
   border-radius: 8px;
   font-size: 1.5rem ;
   margin-top: 24px ;
+  :hover {
+    cursor: pointer;
+  }
 }
 & .pre {
   background-color: transparent;
@@ -26,18 +30,34 @@ width: 100% ;
   border-radius: 8px;
   font-size: 1.5rem ;
   margin-top: 24px ;
+   :hover {
+    cursor: pointer;
+  }
   visibility:  ${props => (props.step !== 1 ? 'visible' : 'hidden')};
 }
 `
 
 function ProgressPhase(props) {
+  const stepCopy = props.step
+  function onClickNextBtn() {
+    // 表單頁數狀態設定
+    if (stepCopy < 3) {
+      const setStep = props.event
+      setStep(stepCopy + 1)
+    }
+  }
+  function onClickPreBtn() {
+    // 表單頁數狀態設定
+    const setStep = props.event
+    setStep(stepCopy - 1)
+  }
   return (
     <ProgressStyle step={props.step}>
       <section className="button-group" data-phase={props.phase}>
-        <button className="pre">
+        <button className="pre" onClick={onClickPreBtn}>
           上一步
         </button>
-        <button className="next">
+        <button className="next" onClick={onClickNextBtn}>
           {props.step !== 3 ? <div>下一步 <img src={rightArrow} alt='right-arrow' /></div> : '確認下單'}
         </button>
       </section>

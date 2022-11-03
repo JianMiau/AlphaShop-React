@@ -13,10 +13,10 @@ border-bottom: 1px solid lightgray;
 function MainForm(props) {
   return (
     <FormStyle>
-      <section className="form-container col col-12">
-        {/* <AddressForm /> */}
-        {/* <ShippingForm /> */}
-        <CreaditCardForm />
+      <section className="form-container">
+        {props.step === 1 && <AddressForm />}
+        {props.step === 2 && <ShippingForm />}
+        {props.step === 3 && <CreaditCardForm />}
       </section>
     </FormStyle>
   )

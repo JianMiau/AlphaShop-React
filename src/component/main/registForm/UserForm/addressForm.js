@@ -5,14 +5,13 @@ const FormStyle = styled.div`
 font-size: 1rem ;
 width: 100% ;
 padding: 3% 0;
-border-bottom: 2px solid  lightgray;
 
 & .form {
   display: flex ;
   flex-direction: column ;
 }
 & .form-title {
-  font-size: 2rem ;
+  font-size: 2.4rem ;
 }
 & .form-row {
   width: 100% ;
