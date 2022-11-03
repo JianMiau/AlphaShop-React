@@ -5,7 +5,6 @@ const FormStyle = styled.div`
 font-size: 1rem ;
 width: 100% ;
 padding: 3% 0;
-
 & .form {
   display: flex ;
   flex-direction: column ;

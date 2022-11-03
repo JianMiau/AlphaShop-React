@@ -24,7 +24,7 @@ padding: 3% 0;
 function ShippingForm() {
   return (
     <FormStyle>
-      <form className="form" data-phase="address">
+      <form className="form" data-phase="shipping">
         <h3 className="form-title">運送方式</h3>
         <section className="form-body">
           <div className="form-row">
@@ -34,9 +34,7 @@ function ShippingForm() {
             <RadioInput width={100} price={'$500'} title="DHL貨運" content="48小時內送達" />
           </div>
         </section>
-
       </form>
-
     </FormStyle>
 
   )

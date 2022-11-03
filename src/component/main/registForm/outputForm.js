@@ -4,10 +4,11 @@ import MainForm from './UserForm/MainForm'
 
 const FormStyle = styled.div`
 width: 100%;
-height: 600px;
+height: 730px ;
+border-bottom: 1px solid lightgray;
 .register-container {
   display: flex ;
-  width: 100% ;
+  width: inherit ;
   flex-direction: column ;
   padding: 3% 0;
 }
@@ -22,7 +23,7 @@ height: 600px;
 function OutputForm(props) {
   return (
     <FormStyle>
-      <section className="register-container" data-phase="1" data-total-price="0">
+      <section className="register-container" data-phase={props.step} data-total-price="0">
         <h2 className="register-title">{props.title}</h2>
         <RegistStepper step={props.step} />
         <MainForm step={props.step} />

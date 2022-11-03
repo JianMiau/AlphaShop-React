@@ -8,9 +8,16 @@ padding: 0 11.45% ;
 .main-container {
   width: 100% ;
   display: grid ;
-  grid-template-columns: 6fr minmax(125px,1fr) minmax(400px,4fr);
+  grid-template-columns:  minmax(600px,6fr) minmax(125px,1fr) minmax(400px,4fr);
   grid-template-rows: 720px 200px ;
   column-gap: 30px;
+  & {
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: minmax(600px,6fr) minmax(75px,1fr)  minmax(400px,4fr);
+      column-gap: 20px;
+
+    }
+  }
   & .register-container {
     grid-column: 1/2 ;
     grid-row: 1/2 ;
@@ -19,10 +26,10 @@ padding: 0 11.45% ;
     grid-column: 1/2 ;
     grid-row: 2/3 ;
   }
-  & .cart-container {
+  /* & .cart-container {
     grid-column: 3/4; 
     grid-row: 1/3 ;
-  }
+  } */
 }
 
 `
@@ -30,15 +37,16 @@ padding: 0 11.45% ;
 export default function Main() {
   const [step, setPageStep] = useState(1)
   return (
-    <MainStyle>
-      <div className="main">
+
+    <div className="main">
+      <MainStyle>
         <div className="main-container">
           <OutputForm title='結帳' step={step} />
           <ProgressControl step={step} event={setPageStep} />
           {/* <ShopCart /> */}
         </div>
-      </div>
-    </MainStyle>
+      </MainStyle>
+    </div>
 
   )
 }

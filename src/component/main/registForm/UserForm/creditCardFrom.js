@@ -24,7 +24,7 @@ padding: 3% 0;
 function CreaditCardForm() {
   return (
     <FormStyle>
-      <form className="form" data-phase="address">
+      <form className="form" data-phase="credit-card">
         <h3 className="form-title">付款資訊</h3>
         <section className="form-body">
           <div className="form-row">
