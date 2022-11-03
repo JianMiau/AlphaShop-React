@@ -14,7 +14,7 @@ height: 600px;
 
 .register-title{
   margin: 0 ;
-  font-size: 2rem ;
+  font-size: 3.2rem ;
 }
 
 `

@@ -15,8 +15,8 @@ function MainForm(props) {
     <FormStyle>
       <section className="form-container col col-12">
         {/* <AddressForm /> */}
-        <ShippingForm />
-        {/* <CreaditCardForm /> */}
+        {/* <ShippingForm /> */}
+        <CreaditCardForm />
       </section>
     </FormStyle>
   )

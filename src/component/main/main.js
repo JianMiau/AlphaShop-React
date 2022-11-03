@@ -7,7 +7,7 @@ padding: 0 11.45% ;
   width: 100% ;
   display: grid ;
   grid-template-columns: 6fr minmax(125px,1fr) minmax(400px,4fr);
-  grid-template-rows: 690px 200px ;
+  grid-template-rows: 720px 200px ;
   column-gap: 30px;
   & .register-container {
     grid-column: 1/2 ;
