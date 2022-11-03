@@ -5,8 +5,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm install`
+
+安裝package.json相關套件
 
 ### `npm start`
+
+啟動React專案和本地端伺服器 port3000，即可打開主頁
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
