@@ -41,7 +41,7 @@ padding-top: 64px ;
   }
 }
 `
-function Footer (props) {
+function Footer(props) {
   return (
     <footer className='footer'>
       <FooterStyle>
