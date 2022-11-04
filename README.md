@@ -8,8 +8,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![A3作業說明](https://user-images.githubusercontent.com/71853581/199873695-6bec2b50-c8be-4f6b-a43d-df8a764661b6.png)
 
 =======
-![A3作業說明](https://user-images.githubusercontent.com/71853581/199896702-ceb0efdd-a421-4a26-907b-2a06a50a8c05.png)
->>>>>>> 0198a97f7d765bbc6e8e741f413f5f0c60692dba
 
 ## Available Scripts
 
