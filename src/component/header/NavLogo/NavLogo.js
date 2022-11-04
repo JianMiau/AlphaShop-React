@@ -1,6 +1,6 @@
-import searchIcon from "../icons/search.svg"
-import cartIcon from "../icons/cart.svg"
-import moonIcon from "../icons/moon.svg"
+import searchIcon from "../../icons/search.svg"
+import cartIcon from "../../icons/cart.svg"
+import moonIcon from "../../icons/moon.svg"
 
 import styled from "styled-components"
 const NavLogoStyle = styled.div`
@@ -13,7 +13,7 @@ width: 100% ;
   margin-right: 32px;
 }
 `
-export default function NavLogo() {
+function NavLogo() {
   return (
     <ul className="nav-list site-action-list">
       <NavLogoStyle>
@@ -30,3 +30,5 @@ export default function NavLogo() {
     </ul>
   )
 }
+
+export default NavLogo

@@ -1,6 +1,6 @@
-import NavList from "./navList"
-import NavLogo from "./navLogo"
-import AcLogo from "./acLogo"
+import NavList from "./NavList/NavList"
+import NavLogo from "./NavLogo/NavLogo"
+import AcLogo from "./AcLogo/AcLogo"
 import styled from "styled-components"
 const HeaderStyle = styled.div`
  width: 100% ;
@@ -10,7 +10,7 @@ const HeaderStyle = styled.div`
   align-items: center ;
   justify-content: space-between ;
 `
-export default function Header(props) {
+function Header(props) {
   return (
 
     <header className="header">
@@ -24,3 +24,4 @@ export default function Header(props) {
 
   )
 }
+export default Header

@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import acLogo from "../icons/logo.svg"
-import shopLogo from "../icons/shop.svg"
+import acLogo from "../../icons/logo.svg"
+import shopLogo from "../../icons/shop.svg"
 const AClogoStyle = styled.div`
 .header-logo-container {
   display: flex;

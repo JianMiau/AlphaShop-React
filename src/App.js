@@ -1,7 +1,7 @@
 
-import Header from './component/header/header';
+import Header from './component/Header/Header';
 import Main from './component/Main/Main';
-import Footer from './component/footer/footer';
+import Footer from './component/Footer/footer';
 import styled from 'styled-components';
 const AppStyle = styled.div`
   box-sizing: border-box;
