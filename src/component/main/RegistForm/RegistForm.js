@@ -1,6 +1,6 @@
-import RegistStepper from "./registStepper"
+import FormStepper from "./FormStepper/FormStepper"
 import styled from "styled-components"
-import MainForm from './UserForm/MainForm'
+import UserForm from "./UserForm/UserForm"
 
 const FormStyle = styled.div`
 width: 100%;
@@ -12,25 +12,20 @@ border-bottom: 1px solid lightgray;
   flex-direction: column ;
   padding: 3% 0;
 }
-
 .register-title{
   margin: 0 ;
   font-size: 3.2rem ;
 }
-
 `
-
-function OutputForm(props) {
+function RegistForm(props) {
   return (
     <FormStyle>
-      <section className="register-container" data-phase={props.step} data-total-price="0">
+      <section className="register-container" data-phase={props.step}>
         <h2 className="register-title">{props.title}</h2>
-        <RegistStepper step={props.step} />
-        <MainForm step={props.step} />
+        <FormStepper step={props.step} />
+        <UserForm step={props.step} />
       </section>
     </FormStyle>
-
   )
-
 }
-export default OutputForm
+export default RegistForm

@@ -1,4 +1,4 @@
-import Input from './input'
+import Input from "../Input/Input"
 import styled from "styled-components"
 const FormStyle = styled.div`
 font-size: 1rem ;
@@ -21,7 +21,7 @@ padding: 3% 0;
   }
 }
 `
-function CreaditCardForm() {
+function CreditCardForm() {
   return (
     <FormStyle>
       <form className="form" data-phase="credit-card">
@@ -38,11 +38,8 @@ function CreaditCardForm() {
             <Input width={50} label='CVC/CCV' type='text' placeholder='123' maxlength={3} />
           </div>
         </section>
-
       </form>
-
     </FormStyle>
-
   )
 }
-export default CreaditCardForm
+export default CreditCardForm

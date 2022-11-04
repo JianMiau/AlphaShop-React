@@ -1,6 +1,6 @@
 
 import Header from './component/header/header';
-import Main from './component/main/main';
+import Main from './component/Main/Main';
 import Footer from './component/footer/footer';
 import styled from 'styled-components';
 const AppStyle = styled.div`

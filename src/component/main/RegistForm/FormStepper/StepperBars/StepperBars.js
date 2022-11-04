@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import compelteLogo from "../../icons/pg-complete.svg"
+import completeLogo from "../../../../icons/pg-complete.svg"
 const StepperBarStyle = styled.div`
 margin: 0;
 position: relative ;
@@ -53,7 +53,7 @@ export default function StepperBars(props) {
       <span className="progress-group" data-phase={props.phase}>
         <span className="progress-icon">
           <span className="text"><p>{props.stepNumber}</p></span>
-          <img src={compelteLogo} className="complete-logo" alt="logo" />
+          <img src={completeLogo} className="complete-logo" alt="logo" />
         </span>
         <span className="progress-label">{props.stepLabel}</span>
       </span>

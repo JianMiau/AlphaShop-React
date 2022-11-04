@@ -1,6 +1,6 @@
-import Input from './input'
+import Input from '../Input/Input'
 import styled from "styled-components"
-import SelectInput from './selectInput'
+import SelectInput from '../SelectInput/SelectInput'
 const FormStyle = styled.div`
 font-size: 1rem ;
 width: 100% ;
@@ -54,11 +54,8 @@ function AddressForm() {
             <Input width={65} label='地址' type='adress' placeholder='請輸入地址' />
           </div>
         </section>
-
       </form>
-
     </FormStyle>
-
   )
 }
 export default AddressForm

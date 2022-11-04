@@ -1,14 +1,14 @@
 
-import AddressForm from "./addressForm"
-import ShippingForm from "./shippingForm"
-import CreditCardForm from "./creditCardFrom"
+import AddressForm from "./AddressForm/AddressForm"
+import ShippingForm from "./ShippingForm/ShippingForm"
+import CreditCardForm from "./CreditCardForm/CreditCardFrom"
 import styled from "styled-components"
 const FormStyle = styled.div`
 & .form-container {
   width: 100% ;
 }
 `
-function MainForm(props) {
+function UserForm(props) {
   return (
     <FormStyle>
       <section className="form-container">
@@ -19,4 +19,4 @@ function MainForm(props) {
     </FormStyle>
   )
 }
-export default MainForm
+export default UserForm

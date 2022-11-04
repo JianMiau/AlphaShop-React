@@ -1,6 +1,5 @@
-import Input from './input'
 import styled from "styled-components"
-import RadioInput from './radioInput'
+import RadioInput from '../RadioInput/RadioInput'
 const FormStyle = styled.div`
 font-size: 1rem ;
 width: 100% ;
