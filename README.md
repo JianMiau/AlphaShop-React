@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # 目前專案畫面
 
-<img width="467" alt="image" src="https://user-images.githubusercontent.com/71853581/199671141-41d5f157-b4c7-41e8-81b2-72a4cb5e9cc8.png">
+![A3作業說明](https://user-images.githubusercontent.com/71853581/199896702-ceb0efdd-a421-4a26-907b-2a06a50a8c05.png)
 
 ## Available Scripts
 
