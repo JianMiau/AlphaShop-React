@@ -2,7 +2,6 @@ import styled from "styled-components"
 import rightArrow from "../../icons/right-arrow.svg"
 const ProgressStyle = styled.div`
 width: 100%;
-margin-top: 24px ;
 & .button-group {
   display: flex ;
   justify-content: space-between ;
@@ -15,6 +14,7 @@ margin-top: 24px ;
   width: 25% ;
   height: 46px ;
   border-radius: 8px;
+  border-color: transparent ;
   font-size: 1.5rem ;
   margin-top: 24px ;
   :hover {
@@ -30,6 +30,8 @@ margin-top: 24px ;
   border-radius: 8px;
   font-size: 1.5rem ;
   margin-top: 24px ;
+  border-color: transparent ;
+  outline: none ;
    :hover {
     cursor: pointer;
   }

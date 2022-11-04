@@ -4,8 +4,9 @@ import UserForm from "./UserForm/UserForm"
 
 const FormStyle = styled.div`
 width: 100%;
-height: 730px ;
-border-bottom: 1px solid lightgray;
+height: 750px ;
+padding-bottom: 48px ;
+border-bottom: 1px solid #E6E6EB;
 .register-container {
   display: flex ;
   width: inherit ;
@@ -20,7 +21,7 @@ border-bottom: 1px solid lightgray;
 function RegistForm(props) {
   return (
     <FormStyle>
-      <section className="register-container" data-phase={props.step}>
+      <section className="register-container">
         <h2 className="register-title">{props.title}</h2>
         <FormStepper step={props.step} />
         <UserForm step={props.step} />

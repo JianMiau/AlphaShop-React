@@ -9,7 +9,7 @@ padding: 0 11.45% ;
   width: 100% ;
   display: grid ;
   grid-template-columns:  minmax(600px,6fr) minmax(125px,1fr) minmax(400px,4fr);
-  grid-template-rows: 720px 200px ;
+  grid-template-rows: auto 200px ;
   column-gap: 30px;
   & {
     @media screen and (max-width: 1200px) {
@@ -34,14 +34,15 @@ padding: 0 11.45% ;
 
 `
 function Main() {
-  const [step, setPageStep] = useState(1)
+  // setFunction 命名記得用前面變數加上set
+  const [pageStep, setPageStep] = useState(1)
   return (
 
     <div className="main">
       <MainStyle>
         <div className="main-container">
-          <RegistForm title='結帳' step={step} />
-          <ProgressControl step={step} event={setPageStep} />
+          <RegistForm title='結帳' step={pageStep} />
+          <ProgressControl step={pageStep} event={setPageStep} />
           {/* <ShopCart /> */}
         </div>
       </MainStyle>

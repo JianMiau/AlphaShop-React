@@ -2,14 +2,15 @@ import styled from "styled-components"
 const InputStyle = styled.div`
 margin:0 ;
 width: ${(props) => props.width}% ; 
+margin-right: ${(props) => props.marginRight}%;
 .input-group {
   box-sizing: border-box ;
   width: 100% ;
   display: flex ;
   flex-direction: column ;
   font-size: 1.8rem ;
-  padding: 3% ;
-  padding-left: 0 ;
+  /*讓表單貼齊外框*/
+  padding: 3% 0 ;
  & .input-label {
   font-size: 1.2rem;
     font-weight: 700 ;
@@ -28,7 +29,7 @@ width: ${(props) => props.width}% ;
 
 function Input(props) {
   return (
-    <InputStyle width={props.width}>
+    <InputStyle width={props.width} marginRight={props.right}>
       <div className="input-group">
         <div className="input-label">{props.label}</div>
         <input type={props.type} placeholder={props.placeholder} maxLength={props.maxlength} />

@@ -46,7 +46,7 @@ function AddressForm() {
             <Input width={65} label='姓名' type='text' placeholder='請輸入姓名' />
           </div>
           <div className="form-row">
-            <Input width={50} label='電話' type='tel' placeholder='請輸入電話' />
+            <Input width={48} right={2} label='電話' type='tel' placeholder='請輸入電話' />
             <Input width={50} label='E-mail' type='email' placeholder='請輸入信箱' />
           </div>
           <div className="form-row">

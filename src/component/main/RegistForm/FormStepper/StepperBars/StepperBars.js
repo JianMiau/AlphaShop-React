@@ -6,9 +6,9 @@ position: relative ;
   &:not(:last-child)::after {
     content: '';
     top: 50%;
-    left: 100% ;
+    left: calc(100% + 32px) ;
     position: absolute ;
-    width: 120px ;
+    width: 60px ;
     height: 2px ;
     background-color: ${props => props.active ? 'black' : 'lightgrey'};
   }
@@ -47,7 +47,7 @@ position: relative ;
 `
 // stpper 變換邏輯主要要父層state傳進來的參數來判斷，再把它傳入style-component做變化
 // props.stepNumber是元件本身的號碼、props.step是目前頁面狀態
-export default function StepperBars(props) {
+function StepperBars(props) {
   return (
     <StepperBarStyle active={props.active} step={props.step} stepNumber={props.stepNumber}>
       <span className="progress-group" data-phase={props.phase}>
@@ -62,3 +62,4 @@ export default function StepperBars(props) {
 
   )
 }
+export default StepperBars

@@ -34,7 +34,7 @@ function CreditCardForm() {
             <Input width={100} label='卡號' type='text' placeholder='1111 2222 3333 4444' maxlength={12} />
           </div>
           <div className="form-row">
-            <Input width={50} label='有效期限' type='text' placeholder='MM/YY' />
+            <Input width={48} right={2} label='有效期限' type='text' placeholder='MM/YY' />
             <Input width={50} label='CVC/CCV' type='text' placeholder='123' maxlength={3} />
           </div>
         </section>

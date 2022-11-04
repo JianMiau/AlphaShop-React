@@ -4,9 +4,7 @@ import ShippingForm from "./ShippingForm/ShippingForm"
 import CreditCardForm from "./CreditCardForm/CreditCardFrom"
 import styled from "styled-components"
 const FormStyle = styled.div`
-& .form-container {
-  width: 100% ;
-}
+width: 100% ;
 `
 function UserForm(props) {
   return (
