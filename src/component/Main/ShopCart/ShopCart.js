@@ -2,6 +2,29 @@ import Product from "./Product/Product"
 import styled from "styled-components"
 const ShopCartStyle = styled.div`
 width: 100% ;
+padding: 32px 24px;
+border: 1px solid #F0F0F5 ;
+border-radius: 8px;
+.cart-title {
+  font-size: 2.4rem ;
+}
+.cart-info {
+  width: 100% ;
+  display: flex;
+  justify-content: space-between ;
+  align-items: flex-end;
+  height: 37px ;
+  border-top: 1px solid #F0F0F5 ;
+  font-size: 1.4rem ;
+  margin-bottom: 32px ;
+  padding-top: 16px ;
+  & .text {
+    font-weight: 400 ;
+  }
+   & .price {
+    font-weight: 700 ;
+  }
+}
 `
 const prdoucts = [
   {
@@ -29,13 +52,13 @@ function ShopCart() {
         <section className='product-list' data-total-price='0'>
           <Product data={prdoucts} />
         </section>
-        <section className='cart-info shipping col col-12'>
+        <section className='cart-info shipping'>
           <div className='text'>運費</div>
-          <div className='price' />
+          <div className='price'>免費</div>
         </section>
-        <section className='cart-info total col col-12'>
+        <section className='cart-info total'>
           <div className='text'>小計</div>
-          <div className='price' />
+          <div className='price'>${5298}</div>
         </section>
       </ShopCartStyle>
 

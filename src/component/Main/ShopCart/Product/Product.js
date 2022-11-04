@@ -3,8 +3,28 @@ import minusIcon from "../../../icons/minus.svg"
 import styled from "styled-components"
 const ProductStyle = styled.div`
 display: flex ;
-.product-name,.product-price {
+padding-bottom: 33px ;
+.product-info {
+  margin-left: 21px ;
+  width: 100% ;
+}
+.product-info-main {
+  display: flex ;
+  justify-content: space-between ;
+
+& .product-name,.product-price {
   display: inline-block;
+  font-size: 1.6rem ;
+}
+& .product-name {
+  margin-bottom: 24px ;
+  font-weight: 400 ;
+}
+& .product-price {
+  margin-bottom: 24px ;
+  font-weight: 700 ;
+}
+
 }
 `
 const ProductImageStyle = styled.div`
@@ -13,11 +33,32 @@ height: 100px;
 .product-img {
   width: 100%;
   object-fit: contain ;
+  border-radius: 4px ;
 }
 `
 const ProductBtnStyle = styled.div`
 .product-control {
   display: flex ;
+  font-size: 1.4rem ;
+  & button {
+    width: 24px ;
+    height: 24px ;
+    line-height: 26px ;
+    border-radius: 50% ;
+    border: transparent ;
+    & :hover {
+      cursor: pointer;
+    }
+    & > img {
+    width: 100% ;
+    object-fit: cover ;
+  }
+  }
+   & .product-count {
+      width: 53.12px;
+      text-align: center ;
+      line-height: 1.4rem ;
+    }
 }
 
 `
@@ -58,8 +99,10 @@ function Product(props) {
           <ProductStyle>
             <ProductImage image={item.img} />
             <div className='product-info'>
-              <div className='product-name'>{item.name}</div>
-              <div className='product-price'>${item.price}</div>
+              <div class="product-info-main">
+                <div className='product-name'>{item.name}</div>
+                <div className='product-price'>${item.price}</div>
+              </div>
               <ProductBtn count={item.quantity} />
             </div>
           </ProductStyle>
