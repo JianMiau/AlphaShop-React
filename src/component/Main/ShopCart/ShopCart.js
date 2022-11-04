@@ -1,55 +1,44 @@
-function ShopCart () {
+import Product from "./Product/Product"
+import styled from "styled-components"
+const ShopCartStyle = styled.div`
+width: 100% ;
+`
+const prdoucts = [
+  {
+    id: '1',
+    name: '貓咪罐罐',
+    img: 'https://picsum.photos/300/300?text=1',
+    price: 100,
+    quantity: 2,
+  },
+  {
+    id: '2',
+    name: '貓咪干干',
+    img: 'https://picsum.photos/300/300?text=2',
+    price: 200,
+    quantity: 1,
+  },
+]
+
+
+function ShopCart() {
   return (
-    <section className='cart-container col col-lg-5 col-sm-12'>
-      <h3 className='cart-title'>購物籃</h3>
+    <section className='cart-container'>
+      <ShopCartStyle>
+        <h3 className='cart-title'>購物籃</h3>
+        <section className='product-list' data-total-price='0'>
+          <Product data={prdoucts} />
+        </section>
+        <section className='cart-info shipping col col-12'>
+          <div className='text'>運費</div>
+          <div className='price' />
+        </section>
+        <section className='cart-info total col col-12'>
+          <div className='text'>小計</div>
+          <div className='price' />
+        </section>
+      </ShopCartStyle>
 
-      <section className='product-list col col-12' data-total-price='0'>
-        <div className='product-container col col-12' data-count='0' data-price='3999'>
-          <img className='img-container' src='./public/images/product-1.jpg' />
-          <div className='product-info'>
-            <div className='product-name'>破壞補丁修身牛仔褲</div>
-            <div className='product-control-container'>
-              <div className='product-control'>
-                {/* <svg className="product-action minus">
-                  <use xlink:href="#svg-icon-minus"></use>
-                </svg>
-                <span class="product-count"></span>
-                <svg class="product-action plus">
-                  <use xlink:href="#svg-icon-plus"></use>
-                </svg> */}
-              </div>
-            </div>
-            <div className='price' />
-          </div>
-        </div>
-        <div className='product-container col col-12' data-count='0' data-price='1299'>
-          <img className='img-container' src='./public/images/product-2.jpg' />
-          <div className='product-info'>
-            <div className='product-name'>刷色直筒牛仔褲</div>
-            <div className='product-control-container'>
-              <div className='product-control'>
-                {/* <svg className="product-action minus">
-                  <use xlink:href="#svg-icon-minus"></use>
-                </svg>
-                <span className="product-count"></span>
-                <svg className="product-action plus">
-                  <use xlink:href="#svg-icon-plus"></use>
-                </svg> */}
-              </div>
-            </div>
-            <div className='price' />
-          </div>
-        </div>
-      </section>
-
-      <section className='cart-info shipping col col-12'>
-        <div className='text'>運費</div>
-        <div className='price' />
-      </section>
-      <section className='cart-info total col col-12'>
-        <div className='text'>小計</div>
-        <div className='price' />
-      </section>
     </section>
 
   )
