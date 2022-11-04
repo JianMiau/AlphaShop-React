@@ -40,16 +40,16 @@ width: 100%;
 
 `
 
-function ProgressControl (props) {
+function ProgressControl(props) {
   const stepCopy = props.step
-  function onClickNextBtn () {
+  function onClickNextBtn() {
     // 表單頁數狀態設定
     if (stepCopy < 3) {
       const setStep = props.event
       setStep(stepCopy + 1)
     }
   }
-  function onClickPreBtn () {
+  function onClickPreBtn() {
     // 表單頁數狀態設定
     const setStep = props.event
     setStep(stepCopy - 1)
