@@ -1,5 +1,5 @@
 import Input from '../Input/Input'
-import styled from "styled-components"
+import styled from 'styled-components'
 import SelectInput from '../SelectInput/SelectInput'
 const FormStyle = styled.div`
 font-size: 1rem ;
@@ -33,23 +33,23 @@ const location = [
   { id: 'TYC', title: '桃園市' },
   { id: 'HSH', title: '新竹縣' },
   { id: 'HSC', title: '新竹市' },
-  { id: 'TXG', title: '台中市' },
+  { id: 'TXG', title: '台中市' }
 ]
-function AddressForm() {
+function AddressForm () {
   return (
     <FormStyle>
-      <form className="form" data-phase="address">
-        <h3 className="form-title">寄送地址</h3>
-        <section className="form-body">
-          <div className="form-row">
+      <form className='form' data-phase='address'>
+        <h3 className='form-title'>寄送地址</h3>
+        <section className='form-body'>
+          <div className='form-row'>
             <SelectInput width={35} label='稱謂' data={gender} />
             <Input width={65} label='姓名' type='text' placeholder='請輸入姓名' />
           </div>
-          <div className="form-row">
+          <div className='form-row'>
             <Input width={48} right={2} label='電話' type='tel' placeholder='請輸入電話' />
             <Input width={50} label='E-mail' type='email' placeholder='請輸入信箱' />
           </div>
-          <div className="form-row">
+          <div className='form-row'>
             <SelectInput width={35} label='縣市' data={location} />
             <Input width={65} label='地址' type='adress' placeholder='請輸入地址' />
           </div>

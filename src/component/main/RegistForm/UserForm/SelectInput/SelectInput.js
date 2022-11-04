@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 const InputStyle = styled.div`
 width: ${props => props.width}% ;
 .input-group {
@@ -26,7 +26,7 @@ width: ${props => props.width}% ;
 
 `
 
-function Option(props) {
+function Option (props) {
   return (
     <>
       {props.data.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
@@ -34,12 +34,12 @@ function Option(props) {
   )
 }
 
-function SelectInput(props) {
+function SelectInput (props) {
   return (
     <InputStyle width={props.width}>
-      <div className="input-group">
-        <div className="input-label">{props.label}</div>
-        <div className="select-container">
+      <div className='input-group'>
+        <div className='input-label'>{props.label}</div>
+        <div className='select-container'>
           <select required>
             <Option data={props.data} />
           </select>

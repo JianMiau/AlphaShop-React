@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 const InputStyle = styled.div`
 margin:0 ;
 width: ${(props) => props.width}% ; 
@@ -36,19 +36,19 @@ width: ${(props) => props.width}% ;
 }
 `
 
-function RadioInput(props) {
+function RadioInput (props) {
   return (
     <InputStyle width={props.width}>
-      <label className="radio-group" data-price="0">
-        <input id="shipping-standard" type="radio" name="shipping" />
-        <div className="radio-info">
-          <div className="radio-title">
-            <div className="radio-text">{props.title}</div>
-            <div className="radio-price">{props.price}</div>
+      <label className='radio-group' data-price='0'>
+        <input id='shipping-standard' type='radio' name='shipping' />
+        <div className='radio-info'>
+          <div className='radio-title'>
+            <div className='radio-text'>{props.title}</div>
+            <div className='radio-price'>{props.price}</div>
           </div>
-          <div className="radio-period">{props.content}</div>
+          <div className='radio-period'>{props.content}</div>
         </div>
-        <div className="radio-box-border"></div>
+        <div className='radio-box-border' />
       </label>
     </InputStyle>
 

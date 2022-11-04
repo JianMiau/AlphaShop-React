@@ -1,8 +1,8 @@
 
-import Header from './component/Header/Header';
-import Main from './component/Main/Main';
-import Footer from './component/Footer/footer';
-import styled from 'styled-components';
+import Header from './component/Header/Header'
+import Main from './component/Main/Main'
+import Footer from './component/Footer/footer'
+import styled from 'styled-components'
 const AppStyle = styled.div`
   box-sizing: border-box;
   width: 100%;
@@ -28,14 +28,14 @@ const AppStyle = styled.div`
   }
 `
 
-function App() {
+function App () {
   return (
     <AppStyle>
       <Header />
       <Main />
       <Footer />
     </AppStyle>
-  );
+  )
 }
 
-export default App;
+export default App

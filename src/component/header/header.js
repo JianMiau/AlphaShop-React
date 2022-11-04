@@ -1,7 +1,7 @@
-import NavList from "./NavList/NavList"
-import NavLogo from "./NavLogo/NavLogo"
-import AcLogo from "./AcLogo/AcLogo"
-import styled from "styled-components"
+import NavList from './NavList/NavList'
+import NavLogo from './NavLogo/NavLogo'
+import AcLogo from './AcLogo/AcLogo'
+import styled from 'styled-components'
 const HeaderStyle = styled.div`
  width: 100% ;
  padding: 0 11.45%;
@@ -10,17 +10,16 @@ const HeaderStyle = styled.div`
   align-items: center ;
   justify-content: space-between ;
 `
-function Header(props) {
+function Header (props) {
   return (
 
-    <header className="header">
+    <header className='header'>
       <HeaderStyle>
         <NavList />
         <AcLogo />
         <NavLogo />
       </HeaderStyle>
     </header>
-
 
   )
 }

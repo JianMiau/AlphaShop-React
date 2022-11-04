@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 const InputStyle = styled.div`
 margin:0 ;
 width: ${(props) => props.width}% ; 
@@ -27,17 +27,16 @@ margin-right: ${(props) => props.marginRight}%;
 }
 `
 
-function Input(props) {
+function Input (props) {
   return (
     <InputStyle width={props.width} marginRight={props.right}>
-      <div className="input-group">
-        <div className="input-label">{props.label}</div>
+      <div className='input-group'>
+        <div className='input-label'>{props.label}</div>
         <input type={props.type} placeholder={props.placeholder} maxLength={props.maxlength} />
       </div>
     </InputStyle>
 
   )
-
 }
 
 export default Input

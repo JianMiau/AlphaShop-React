@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import acLogo from "../../icons/logo.svg"
-import shopLogo from "../../icons/shop.svg"
+import styled from 'styled-components'
+import acLogo from '../../icons/logo.svg'
+import shopLogo from '../../icons/shop.svg'
 const AClogoStyle = styled.div`
 .header-logo-container {
   display: flex;
@@ -20,18 +20,19 @@ const AClogoStyle = styled.div`
 }
 `
 
-export default function AcLogo() {
+function AcLogo () {
   return (
     <AClogoStyle>
-      <a className="header-logo-container" href="#">
-        <div className="ac-logo">
-          <img src={acLogo} alt="ac-logo" />
+      <a className='header-logo-container' href='#'>
+        <div className='ac-logo'>
+          <img src={acLogo} alt='ac-logo' />
         </div>
-        <div className="ac-title">
-          <img src={shopLogo} alt="ac-title" />
+        <div className='ac-title'>
+          <img src={shopLogo} alt='ac-title' />
         </div>
       </a>
     </AClogoStyle>
 
   )
 }
+export default AcLogo

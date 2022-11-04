@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import RegistForm from "./RegistForm/RegistForm"
-import ProgressControl from "./ProgressControl/ProgresControl"
-import { useState } from "react"
+import styled from 'styled-components'
+import RegistForm from './RegistForm/RegistForm'
+import ProgressControl from './ProgressControl/ProgresControl'
+import { useState } from 'react'
 
 const MainStyle = styled.div`
 padding: 0 11.45% ;
@@ -38,9 +38,9 @@ function Main() {
   const [pageStep, setPageStep] = useState(1)
   return (
 
-    <div className="main">
+    <div className='main'>
       <MainStyle>
-        <div className="main-container">
+        <div className='main-container'>
           <RegistForm title='結帳' step={pageStep} />
           <ProgressControl step={pageStep} event={setPageStep} />
           {/* <ShopCart /> */}
