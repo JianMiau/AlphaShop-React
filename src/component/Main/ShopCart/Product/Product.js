@@ -8,13 +8,11 @@ padding-bottom: 33px ;
   margin-left: 21px ;
   width: 100% ;
 }
-.product-info-main {
-  display: flex ;
-  justify-content: space-between ;
 
-& .product-name,.product-price {
+.product-name,.product-price {
   display: inline-block;
   font-size: 1.6rem ;
+  width: 50% ;
 }
 & .product-name {
   margin-bottom: 24px ;
@@ -23,8 +21,7 @@ padding-bottom: 33px ;
 & .product-price {
   margin-bottom: 24px ;
   font-weight: 700 ;
-}
-
+  text-align: end ;
 }
 `
 const ProductImageStyle = styled.div`
@@ -99,10 +96,8 @@ function Product(props) {
           <ProductStyle>
             <ProductImage image={item.img} />
             <div className='product-info'>
-              <div class="product-info-main">
-                <div className='product-name'>{item.name}</div>
-                <div className='product-price'>${item.price}</div>
-              </div>
+              <div className='product-name'>{item.name}</div>
+              <div className='product-price'>${item.price}</div>
               <ProductBtn count={item.quantity} />
             </div>
           </ProductStyle>
