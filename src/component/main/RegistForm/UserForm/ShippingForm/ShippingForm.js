@@ -16,11 +16,12 @@ padding: 3% 0;
   display: flex ;
   & >*{
     border-radius: 25px ;
+    height: 100%;
   }
  
 }
 `
-function ShippingForm () {
+function ShippingForm() {
   return (
     <FormStyle>
       <form className='form' data-phase='shipping'>

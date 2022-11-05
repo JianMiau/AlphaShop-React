@@ -27,11 +27,13 @@ width: ${(props) => props.width}% ;
 .radio-text, .radio-price{
   font-size: 1.4rem ;
   line-height: 2rem ;
+  font-weight: 400 ;
 }
 & .radio-period {
   font-size: 1.2rem ;
    line-height: 2rem ;
    padding:  5px 26px 0 ;
+   font-weight: 400 ;
 }
 }
 `
