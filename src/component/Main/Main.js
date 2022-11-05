@@ -7,18 +7,27 @@ import { useState } from 'react'
 const MainStyle = styled.div`
 padding: 0 11.45% ;
 .main-container {
+  /*Mobile First RWD*/
   width: 100% ;
-  display: grid ;
-  grid-template-columns:  minmax(600px,6fr) minmax(125px,1fr) minmax(440px,4fr);
-  grid-template-rows: auto 200px ;
-  column-gap: 30px;
-  & {
-    @media screen and (max-width: 1200px) {
-      grid-template-columns: minmax(600px,6fr) minmax(75px,1fr)  minmax(400px,4fr);
+  display: flex ;
+  flex-direction: column ;
+  @media (min-width: 375px) {
+    display: grid ;
+      grid-template-columns: minmax(400px,6fr) minmax(50px,1fr)  minmax(300px,4fr);
       column-gap: 20px;
-
     }
+  @media (min-width: 800px) {
+    display: grid ;
+      grid-template-columns: minmax(540px,6fr) minmax(50px,1fr)  minmax(360px,4fr);
+      column-gap: 20px;
   }
+  @media (min-width: 1440px) {
+     grid-template-columns:  minmax(600px,6fr) minmax(125px,1fr) minmax(440px,4fr);
+     grid-template-rows: auto 200px ;
+     column-gap: 30px;
+  }
+ 
+
   & .register-container {
     grid-column: 1/2 ;
     grid-row: 1/2 ;
@@ -44,8 +53,8 @@ function Main() {
       <MainStyle>
         <div className='main-container'>
           <RegistForm title='結帳' step={pageStep} />
-          <ProgressControl step={pageStep} event={setPageStep} />
           <ShopCart />
+          <ProgressControl step={pageStep} event={setPageStep} />
         </div>
       </MainStyle>
     </div>

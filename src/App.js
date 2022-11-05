@@ -21,10 +21,14 @@ const AppStyle = styled.div`
     box-sizing: inherit;
   }
   .footer {
+    display: none ;
+  @media (min-width: 375px) {
+    display: block ;
     width: 100% ;
     height: 284px ;
     background-color:#E5E5E5 ;
     box-sizing: inherit;
+  }
   }
 `
 
