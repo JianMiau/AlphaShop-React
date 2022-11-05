@@ -38,9 +38,9 @@ const ProductBtnStyle = styled.div`
   display: flex ;
   font-size: 1.4rem ;
   & button {
-    width: 24px ;
-    height: 24px ;
-    line-height: 26px ;
+    width: 27px ;
+    height: 27px ;
+    line-height: 33px ;
     border-radius: 50% ;
     border: transparent ;
     & :hover {
@@ -48,7 +48,7 @@ const ProductBtnStyle = styled.div`
     }
     & > img {
     width: 100% ;
-    object-fit: cover ;
+    object-fit: contain ;
   }
   }
    & .product-count {
@@ -77,7 +77,7 @@ function ProductBtn(props) {
           <button>
             <img className="product-action-minus" src={minusIcon} alt="minus-btn" />
           </button>
-          <span class="product-count">{props.count}</span>
+          <span className="product-count">{props.count}</span>
           <button>
             <img className="product-action-minus" src={plusIcon} alt="plus-btn" />
           </button>

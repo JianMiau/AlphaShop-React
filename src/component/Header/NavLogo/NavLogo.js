@@ -9,11 +9,14 @@ width: 100% ;
   list-style: none ;
   display: flex ;
   justify-content: flex-end ;
+@media screen and (max-width: 375px) {
+  display: none ;
+ }
 .nav-item {
   margin-right: 32px;
 }
 `
-function NavLogo () {
+function NavLogo() {
   return (
     <ul className='nav-list site-action-list'>
       <NavLogoStyle>

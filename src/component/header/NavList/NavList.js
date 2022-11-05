@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 const NavListStyle = styled.div`
  width: 100%;
+ @media screen and (max-width: 375px) {
+  display: none ;
+ }
  .nav-list{
   list-style: none ;
   display: flex ;
@@ -20,7 +23,7 @@ const NavListStyle = styled.div`
 }
 `
 
-function NavList () {
+function NavList() {
   return (
     <nav className='navbar-menu'>
       <NavListStyle>
