@@ -77,7 +77,7 @@ function ProductBtn(props) {
           <button>
             <img className="product-action-minus" src={minusIcon} alt="minus-btn" />
           </button>
-          <span class="product-count">{props.count}</span>
+          <span className="product-count">{props.count}</span>
           <button>
             <img className="product-action-minus" src={plusIcon} alt="plus-btn" />
           </button>

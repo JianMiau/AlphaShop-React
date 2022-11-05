@@ -10,7 +10,7 @@ const HeaderStyle = styled.div`
   align-items: center ;
   justify-content: space-between ;
 `
-function Header (props) {
+function Header(props) {
   return (
 
     <header className='header'>
