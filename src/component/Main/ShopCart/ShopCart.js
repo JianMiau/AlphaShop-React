@@ -26,7 +26,7 @@ border-radius: 8px;
   }
 }
 `
-const prdoucts = [
+const products = [
   {
     id: '1',
     name: '貓咪罐罐',
@@ -50,7 +50,7 @@ function ShopCart() {
       <ShopCartStyle>
         <h3 className='cart-title'>購物籃</h3>
         <section className='product-list' data-total-price='0'>
-          <Product data={prdoucts} />
+          <Product data={products} />
         </section>
         <section className='cart-info shipping'>
           <div className='text'>運費</div>

@@ -26,14 +26,6 @@ width: ${props => props.width}% ;
 
 `
 
-function Option (props) {
-  return (
-    <>
-      {props.data.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
-    </>
-  )
-}
-
 function SelectInput (props) {
   return (
     <InputStyle width={props.width}>
@@ -41,7 +33,7 @@ function SelectInput (props) {
         <div className='input-label'>{props.label}</div>
         <div className='select-container'>
           <select required>
-            <Option data={props.data} />
+            {props.data.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
           </select>
         </div>
       </div>
