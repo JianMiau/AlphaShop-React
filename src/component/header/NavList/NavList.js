@@ -1,26 +1,36 @@
 import styled from 'styled-components'
 const NavListStyle = styled.div`
+ display: none ;
  width: 100%;
- @media screen and (max-width: 375px) {
-  display: none ;
- }
  .nav-list{
   list-style: none ;
   display: flex ;
   padding: 0;
  }
-
-.nav-item {
+  /*RWD mobile first*/
+ @media (min-width: 375px) {
+  display: flex ;
+  .nav-item {
   margin-right: 32px;
   .nav-link {
-    font-size: 1.5rem ;
+    display: flex ;
+    font-size: 1.2rem ;
     color: black;
     text-decoration: none ;
-    @media screen and (max-width: 1200px) {
-      font-size: 1.0rem ; 
-    }
+    white-space: nowrap;
   }
 }
+ }
+ @media (min-width: 600px) {
+  .nav-link {
+    font-size: 1.4rem ;
+  }
+ }
+  @media (min-width: 1440px) {
+  .nav-link {
+    font-size: 1.6rem ;
+  }
+ }
 `
 
 function NavList() {

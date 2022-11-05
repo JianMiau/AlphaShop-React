@@ -9,7 +9,7 @@ width: 100% ;
   list-style: none ;
   display: flex ;
   justify-content: flex-end ;
-@media screen and (max-width: 375px) {
+@media (max-width: 375px) {
   display: none ;
  }
 .nav-item {

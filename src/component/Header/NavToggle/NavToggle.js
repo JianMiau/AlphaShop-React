@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 import toggleIcon from "../../icons/toggle.svg"
 const ToggleStyle = styled.div`
-  display: none ;
-  @media screen and (max-width: 375px) {
-    display: flex ;
-    align-items: center;
-    .navbar-toggle {
+  display: flex ;
+  width: 100% ;
+  align-items: center;
+  .navbar-toggle {
     display: none ;
   }
+    /*RWD mobile first*/
+  @media (min-width: 375px) {
+    display: none ;
   }
+ 
 `
 
 function NavToggle() {

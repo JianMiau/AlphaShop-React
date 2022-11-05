@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import NavToggle from './NavToggle/NavToggle'
 const HeaderStyle = styled.div`
  width: 100% ;
+ height: 100% ;
  padding: 0 11.45%;
   box-sizing: border-box ;
   display: flex ;
@@ -13,7 +14,6 @@ const HeaderStyle = styled.div`
 `
 function Header(props) {
   return (
-
     <header className='header'>
       <HeaderStyle>
         <NavToggle />
@@ -22,7 +22,6 @@ function Header(props) {
         <NavLogo />
       </HeaderStyle>
     </header>
-
   )
 }
 export default Header
