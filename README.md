@@ -3,10 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # 目前專案畫面
-
-![A3作業說明](https://user-images.githubusercontent.com/71853581/199873695-6bec2b50-c8be-4f6b-a43d-df8a764661b6.png)
-
-=======
+<img width="993" alt="A4-basic" src="https://user-images.githubusercontent.com/71853581/200102178-2387845b-9023-4577-a5c3-d7b962044e2f.png">
 
 ## Available Scripts
 
