@@ -9,12 +9,13 @@ const NavListStyle = styled.div`
  }
   /*RWD mobile first*/
  @media (min-width: 375px) {
+  width: 100%;
   display: flex ;
   .nav-item {
   margin-right: 32px;
   .nav-link {
     display: flex ;
-    font-size: 1.2rem ;
+    font-size: 1.0rem ;
     color: black;
     text-decoration: none ;
     white-space: nowrap;
@@ -22,6 +23,11 @@ const NavListStyle = styled.div`
 }
  }
  @media (min-width: 600px) {
+  .nav-link {
+    font-size: 1.2rem ;
+  }
+ }
+ @media (min-width: 800px) {
   .nav-link {
     font-size: 1.4rem ;
   }

@@ -5,25 +5,24 @@ import ShopCart from './ShopCart/ShopCart'
 import { useState } from 'react'
 
 const MainStyle = styled.div`
-padding: 0 11.45% ;
+width: 100%;
 .main-container {
   /*Mobile First RWD*/
-  width: 100% ;
+  /*不太懂這裡為什麼設置width:100% 會脫版*/
   display: flex ;
   flex-direction: column ;
-  @media (min-width: 375px) {
-    display: grid ;
-      grid-template-columns: minmax(400px,6fr) minmax(50px,1fr)  minmax(300px,4fr);
-      column-gap: 20px;
-    }
+  padding:0 3% ;
+   
   @media (min-width: 800px) {
+    /*grid排版網格基本大小需要包含gap*/
     display: grid ;
-      grid-template-columns: minmax(540px,6fr) minmax(50px,1fr)  minmax(360px,4fr);
-      column-gap: 20px;
+    grid-template-columns: minmax(440px,6fr) minmax(50px,1fr)  minmax(290px,4fr);
+    grid-template-rows: auto 200px ;
+    column-gap: 20px;
+    padding: 0 11.45% ;
   }
   @media (min-width: 1440px) {
      grid-template-columns:  minmax(600px,6fr) minmax(125px,1fr) minmax(440px,4fr);
-     grid-template-rows: auto 200px ;
      column-gap: 30px;
   }
  

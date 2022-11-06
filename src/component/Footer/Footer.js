@@ -6,7 +6,7 @@ import whatsappIcon from '../icons/whatsapp.svg'
 
 import styled from 'styled-components'
 const FooterStyle = styled.div`
-width: 100% ;
+width: 100%;
 .footer-container {
 display: flex;
 justify-content: space-between ;
@@ -39,6 +39,10 @@ padding-top: 64px ;
     }
 
   }
+/* @media (min-width: 375px) {
+  display: block ;
+} */
+
 }
 `
 function Footer(props) {
