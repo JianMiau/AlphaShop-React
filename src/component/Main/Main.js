@@ -16,7 +16,7 @@ width: 100%;
   @media (min-width: 800px) {
     /*grid排版網格基本大小需要包含gap*/
     display: grid ;
-    grid-template-columns: minmax(440px,6fr) minmax(50px,1fr)  minmax(290px,4fr);
+    grid-template-columns: minmax(402px,6fr) minmax(50px,1fr)  minmax(308px,4fr);
     grid-template-rows: auto 200px ;
     column-gap: 20px;
     padding: 0 11.45% ;
