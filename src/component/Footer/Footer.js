@@ -7,11 +7,20 @@ import whatsappIcon from '../icons/whatsapp.svg'
 import styled from 'styled-components'
 const FooterStyle = styled.div`
 width: 100%;
+display: none ;
+background-color:#E5E5E5 ;
+box-sizing: border-box;
 .footer-container {
 display: flex;
-justify-content: space-between ;
-padding: 0 11.45% ;
-padding-top: 64px ;
+justify-content: space-between;
+@media (min-width: 800px) {
+  padding: 0 5% ;
+  padding-top: 64px ;
+}
+@media (min-width: 1000px) {
+  padding: 0 11.45% ;
+  padding-top: 64px ;
+}
 }
 .footer-logo-container {
   display:flex ;
@@ -39,11 +48,11 @@ padding-top: 64px ;
     }
 
   }
-/* @media (min-width: 375px) {
-  display: block ;
-} */
-
 }
+  /*大於800px 才出現footer 不然內容物太多容易擠壓*/
+ @media (min-width: 800px) {
+    display: block ;     
+  }
 `
 function Footer(props) {
   return (
