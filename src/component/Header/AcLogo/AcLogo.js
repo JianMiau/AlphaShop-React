@@ -16,9 +16,12 @@ const AClogoStyle = styled.div`
    left: 5%;
    margin-left: 0% ;
   }
-  @media (min-width: 800px) {
-  margin-left: 86px;
+  @media (min-width: 1000px) {
+  margin-left: 43px;
   }
+  }
+  @media (min-width: 1440px) {
+  margin-left: 86px;
   }
 
 `

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import rightArrow from '../../icons/right-arrow.svg'
 const ProgressStyle = styled.div`
 width: 100%;
+padding-bottom: 50px;
 & .button-group {
   display: flex ;
   justify-content: space-between ;
@@ -11,7 +12,7 @@ width: 100%;
   color: white;
   text-align: center ;
   line-height: 46px ;
-  width: 25% ;
+  width: 35% ;
   height: 46px ;
   border-radius: 8px;
   border-color: transparent ;
@@ -25,7 +26,7 @@ width: 100%;
   background-color: transparent;
   text-align: center ;
   line-height: 46px ;
-  width: 25% ;
+  width: 35% ;
   height: 46px ;
   border-radius: 8px;
   font-size: 1.5rem ;
@@ -36,6 +37,17 @@ width: 100%;
     cursor: pointer;
   }
   visibility:  ${props => (props.step !== 1 ? 'visible' : 'hidden')};
+}
+/*大於800px 主頁面會切到gird排版，按鈕padding需要調整*/
+@media (min-width: 800px) {
+padding-bottom: 0;
+}
+/*大於1200px 按鈕調整寬度*/
+@media (min-width: 1200px) {
+& .pre, .next {
+  width: 25% ;
+}
+
 }
 
 `

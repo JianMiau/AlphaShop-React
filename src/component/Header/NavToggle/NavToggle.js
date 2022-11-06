@@ -8,7 +8,8 @@ const ToggleStyle = styled.div`
     display: none ;
   }
     /*RWD mobile first*/
-  @media (min-width: 375px) {
+    /*小於1000px 漢堡排出現*/
+  @media (min-width: 1000px) {
     display: none ;
   }
  
