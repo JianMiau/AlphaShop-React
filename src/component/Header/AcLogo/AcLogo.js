@@ -7,6 +7,9 @@ const AClogoStyle = styled.div`
   display: flex;
   align-items: center ;
   width: 100%;
+  .ac-logo {
+    margin-right: 8px;
+  }
   /*RWD mobile first*/
   @media (min-width: 375px) {
    position: relative ;
@@ -17,9 +20,7 @@ const AClogoStyle = styled.div`
   margin-left: 86px;
   }
   }
- .ac-logo {
-    margin-right: 8px;
-  }
+
 `
 
 function AcLogo() {
