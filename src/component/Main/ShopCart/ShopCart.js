@@ -2,14 +2,14 @@ import Product from "./Product/Product"
 import styled from "styled-components"
 const ShopCartStyle = styled.div`
 width: 100% ;
-padding: 32px 24px;
+padding: 8px 6px;
 border: 1px solid #F0F0F5 ;
 border-radius: 8px;
+box-sizing: border-box ;
 .cart-title {
   font-size: 2.4rem ;
 }
 .cart-info {
-  width: 100% ;
   display: flex;
   justify-content: space-between ;
   align-items: flex-end;
@@ -25,6 +25,9 @@ border-radius: 8px;
     font-weight: 700 ;
   }
 }
+  @media (min-width: 1000px) {
+    padding: 32px 24px;
+  }
 `
 const products = [
   {

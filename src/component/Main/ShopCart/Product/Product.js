@@ -7,12 +7,24 @@ padding-bottom: 33px ;
 .product-info {
   margin-left: 21px ;
   width: 100% ;
+  @media (min-width: 800px) {
+      margin-left: 10px ;
+    }
+  @media (min-width: 1000px) {
+      margin-left: 21px ;
+    }
 }
 
 .product-name,.product-price {
   display: inline-block;
   font-size: 1.6rem ;
   width: 50% ;
+   @media (min-width: 800px) {
+      font-size: 1.2rem ;
+    }
+  @media (min-width: 1000px) {
+      font-size: 1.6rem ;
+    }
 }
 & .product-name {
   margin-bottom: 24px ;
