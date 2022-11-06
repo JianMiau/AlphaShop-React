@@ -44,7 +44,7 @@ width: 100%;
 }
 
 `
-function Main() {
+function Main () {
   // setFunction 命名記得用前面變數加上set
   const [pageStep, setPageStep] = useState(1)
   return (

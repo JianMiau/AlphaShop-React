@@ -15,7 +15,7 @@ const HeaderStyle = styled.div`
    padding: 0 11.45%;
   }
 `
-function Header(props) {
+function Header (props) {
   return (
     <header className='header'>
       <HeaderStyle>

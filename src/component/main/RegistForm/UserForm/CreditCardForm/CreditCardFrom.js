@@ -21,7 +21,7 @@ padding: 3% 0;
   }
 }
 `
-function CreditCardForm() {
+function CreditCardForm () {
   return (
     <FormStyle>
       <form className='form' data-phase='credit-card'>

@@ -18,7 +18,7 @@ border-bottom: 1px solid #E6E6EB;
   font-size: 3.2rem ;
 }
 `
-function RegistForm(props) {
+function RegistForm (props) {
   return (
     <FormStyle>
       <section className='register-container'>

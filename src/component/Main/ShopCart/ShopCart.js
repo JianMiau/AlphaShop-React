@@ -1,5 +1,5 @@
-import Product from "./Product/Product"
-import styled from "styled-components"
+import Product from './Product/Product'
+import styled from 'styled-components'
 const ShopCartStyle = styled.div`
 width: 100% ;
 padding: 8px 6px;
@@ -35,19 +35,18 @@ const products = [
     name: '貓咪罐罐',
     img: 'https://picsum.photos/300/300?text=1',
     price: 100,
-    quantity: 2,
+    quantity: 2
   },
   {
     id: '2',
     name: '貓咪干干',
     img: 'https://picsum.photos/300/300?text=2',
     price: 200,
-    quantity: 1,
-  },
+    quantity: 1
+  }
 ]
 
-
-function ShopCart() {
+function ShopCart () {
   return (
     <section className='cart-container'>
       <ShopCartStyle>

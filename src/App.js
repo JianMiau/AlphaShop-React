@@ -25,7 +25,7 @@ const AppStyle = styled.div`
   }
 `
 
-function App() {
+function App () {
   return (
     <AppStyle>
       <Header />

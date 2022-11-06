@@ -96,7 +96,6 @@ function Footer(props) {
                 <img src={facebookIcon} alt='facebook' />
                 <img src={InstagramIcon} alt='instagram' />
                 <img src={whatsappIcon} alt='whatsapp' />
-
               </div>
             </div>
           </section>

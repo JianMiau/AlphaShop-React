@@ -1,6 +1,6 @@
-import plusIcon from "../../../icons/plus.svg"
-import minusIcon from "../../../icons/minus.svg"
-import styled from "styled-components"
+import plusIcon from '../../../icons/plus.svg'
+import minusIcon from '../../../icons/minus.svg'
+import styled from 'styled-components'
 const ProductStyle = styled.div`
 display: flex ;
 padding-bottom: 33px ;
@@ -73,7 +73,7 @@ const ProductBtnStyle = styled.div`
 `
 function ProductImage(props) {
   return (
-    <div className="img-container">
+    <div className='img-container'>
       <ProductImageStyle>
         <img className='product-img' src={props.image} alt={props.name} />
       </ProductImageStyle>
@@ -87,18 +87,17 @@ function ProductBtn(props) {
       <ProductBtnStyle>
         <div className='product-control'>
           <button>
-            <img className="product-action-minus" src={minusIcon} alt="minus-btn" />
+            <img className='product-action-minus' src={minusIcon} alt='minus-btn' />
           </button>
-          <span className="product-count">{props.count}</span>
+          <span className='product-count'>{props.count}</span>
           <button>
-            <img className="product-action-minus" src={plusIcon} alt="plus-btn" />
+            <img className='product-action-minus' src={plusIcon} alt='plus-btn' />
           </button>
         </div>
       </ProductBtnStyle>
     </div>
   )
 }
-
 
 function Product(props) {
   return (

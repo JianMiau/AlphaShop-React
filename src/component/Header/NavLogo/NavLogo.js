@@ -16,7 +16,7 @@ width: 100% ;
   margin-right: 32px;
 }
 `
-function NavLogo() {
+function NavLogo () {
   return (
     <ul className='nav-list site-action-list'>
       <NavLogoStyle>

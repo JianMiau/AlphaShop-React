@@ -21,7 +21,7 @@ padding: 3% 0;
  
 }
 `
-function ShippingForm() {
+function ShippingForm () {
   return (
     <FormStyle>
       <form className='form' data-phase='shipping'>

@@ -26,7 +26,7 @@ const AClogoStyle = styled.div`
 
 `
 
-function AcLogo() {
+function AcLogo () {
   return (
     <AClogoStyle>
       <a className='header-logo-container' href='#'>
@@ -37,7 +37,7 @@ function AcLogo() {
           <img src={shopLogo} alt='ac-title' />
         </div>
       </a>
-    </AClogoStyle >
+    </AClogoStyle>
 
   )
 }

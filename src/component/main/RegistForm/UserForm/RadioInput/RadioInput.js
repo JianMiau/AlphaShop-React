@@ -38,7 +38,7 @@ width: ${(props) => props.width}% ;
 }
 `
 
-function RadioInput(props) {
+function RadioInput (props) {
   return (
     <InputStyle width={props.width}>
       <label className='radio-group' data-price='0'>

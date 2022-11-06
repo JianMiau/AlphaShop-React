@@ -34,7 +34,7 @@ const NavListStyle = styled.div`
  }
 `
 
-function NavList() {
+function NavList () {
   return (
     <nav className='navbar-menu'>
       <NavListStyle>

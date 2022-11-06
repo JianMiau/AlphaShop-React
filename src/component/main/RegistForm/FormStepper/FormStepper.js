@@ -14,7 +14,7 @@ margin: 0;
 
 `
 // active={props.step >= 2} 裡面傳boolean來判斷表單階段，用===判斷型別和數值
-function FormStepper(props) {
+function FormStepper (props) {
   return (
     <StepperStyle>
       <section className='stepper-container'>
