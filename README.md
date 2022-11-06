@@ -4,10 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # 目前專案畫面
 <img width="993" alt="A4-basic" src="https://user-images.githubusercontent.com/71853581/200102178-2387845b-9023-4577-a5c3-d7b962044e2f.png">
-# 本次專案進度(A4)  
-1. 實現 Main.js 主頁面右方ShopCart.js元件實作，切分更細部的Product元件。  
-2. 基本 RWD 實作和排版練習，主要是處理 800~1200px縮小視窗部分，因為小於800px 購物車和表單會被壓縮，改回一維垂直排列。  
-3. footer 因為內容物較多，設定小於800px不顯示。     
+# 本次專案進度(A4)    
+1. 實現 Main.js 主頁面右方ShopCart.js元件實作，切分更細部的Product元件。    
+2. 基本 RWD 實作和排版練習，主要是處理 800~1200px縮小視窗部分，因為小於800px 購物車和表單會被壓縮，改回一維垂直排列。    
+3. footer 因為內容物較多，設定小於800px不顯示。       
 
 ## Available Scripts
 
