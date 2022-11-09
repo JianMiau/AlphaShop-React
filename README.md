@@ -3,12 +3,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # 目前專案畫面
-<img width="993" alt="A4-basic" src="https://user-images.githubusercontent.com/71853581/200102178-2387845b-9023-4577-a5c3-d7b962044e2f.png">        
-# 本次專案進度(A5)-表單頁面切換和購物車總價計算    
-1. 表單頁面切換的useState狀態設在App.js，再傳遞到Main.js，還有下一層的RegisForm和ProgressControll進行畫面變換。  
+<img width="993" alt="A4-basic" src="https://user-images.githubusercontent.com/71853581/200102178-2387845b-9023-4577-a5c3-d7b962044e2f.png"> 
+
+## 本次專案進度(A5)-表單頁面切換和購物車總價計算     
+1. 表單頁面切換的useState狀態設在App.js，再傳遞到Main.js，還有下一層的RegisForm、ProgressControll還有進度條Stepper進行畫面變換。  
 2. 購物車useState狀態設定在ShopCart集中管理，並以商品資料作為起始預設資料。  
-3. 購物品項小於0時，會從購物車當中移除。  
-4. 加減按鈕事件設計很類似，所以合併成一個事件再分派。
+3. 購物品項小於0時，會從購物車畫面中移除。  
+4. 加減按鈕事件設計很類似，button上面加上data-set屬性，利用事件分派區分內部功能。
 
 ## Available Scripts
 
