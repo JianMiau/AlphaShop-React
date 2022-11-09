@@ -51,12 +51,12 @@ function ShopCart() {
   //主要父元件設置狀態
   const [product, setProducts] = useState(initialProducts)
   const copyProduct = Array.from(product) //先複製一份，使用mutate操作
-  //總金額可以用狀態product資料去做計算
+  //總金額可以用狀態product資料去做計算呈現
   let totalPrice = 0
   copyProduct.forEach(data => {
     totalPrice += data.quantity * data.price
   })
-  // 按紐onClick事件handler
+  // 按紐onClick事件handler (加減事件合併)
   function handleOnClick(productId, event) {
     //如果按到plus按鈕,要先取外層才抓得到data-set
     if (event.target.parentNode.dataset.id === "plus") {

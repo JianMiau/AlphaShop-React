@@ -50,12 +50,19 @@ padding-bottom: 0;
 }
 `
 function ProgressControl(props) {
+
   const stepCopy = props.step
+
   function onClickNextBtn() {
+    const setStep = props.onClick
     // 表單頁數狀態設定
     if (stepCopy < 3) {
-      const setStep = props.onClick
       setStep(stepCopy + 1)
+    }
+    else if (stepCopy === 3) {
+      alert('已經確認下單~感謝您的光顧')
+      //回到首頁，之後學到useEffect再送至資料庫
+      setStep(1)
     }
   }
   function onClickPreBtn() {
