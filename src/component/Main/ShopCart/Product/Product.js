@@ -82,17 +82,16 @@ function ProductImage(props) {
 }
 
 function ProductBtn(props) {
-  const handleMinus = props.onClickMinus
-  const handlePlus = props.onClickPlus
+  const handleClick = props.onClick
   return (
     <div className='product-control-container'>
       <ProductBtnStyle>
         <div className='product-control'>
-          <button onClick={() => { handleMinus(props.productId) }}>
+          <button data-id="minus" onClick={(event) => { handleClick(props.productId, event) }}>
             <img className='product-action-minus' src={minusIcon} alt='minus-btn' />
           </button>
           <span className='product-count'>{props.count}</span>
-          <button onClick={() => { handlePlus(props.productId) }}>
+          <button data-id='plus' onClick={(event) => { handleClick(props.productId, event) }}>
             <img className='product-action-plus' src={plusIcon} alt='plus-btn' />
           </button>
         </div>
@@ -111,7 +110,7 @@ function Product(props) {
             <div className='product-info'>
               <div className='product-name'>{item.name}</div>
               <div className='product-price'>${item.price}</div>
-              <ProductBtn count={item.quantity} onClickPlus={props.onClickPlus} onClickMinus={props.onClickMinus} productId={item.id} />
+              <ProductBtn count={item.quantity} productId={item.id} onClick={props.onClick} />
             </div>
           </ProductStyle>
         </div>

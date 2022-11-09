@@ -57,41 +57,45 @@ function ShopCart() {
     totalPrice += data.quantity * data.price
   })
   // 按紐onClick事件handler
-  function handleOnPlus(productId) {
-    setProducts(product.map(item => {
-      if (item.id === productId) {
-        return {
-          ...item,
-          quantity: item.quantity + 1
+  function handleOnClick(productId, event) {
+    //如果按到plus按鈕,要先取外層才抓得到data-set
+    if (event.target.parentNode.dataset.id === "plus") {
+      setProducts(product.map(item => {
+        if (item.id === productId) {
+          return {
+            ...item,
+            quantity: item.quantity + 1
+          }
         }
-      }
-      else {
-        return item
-      }
-    }))
+        else {
+          return item
+        }
+      }))
+    }
+    //如果按到minus按鈕
+    else if (event.target.parentNode.dataset.id === "minus") {
+      let NewProduct = product.map(item => {
+        if (item.id === productId) {
+          return {
+            ...item,
+            quantity: item.quantity - 1
+          }
+        }
+        else {
+          return item
+        }
+      })
+      //如果品項quantity變成0，不出現在cart內
+      setProducts(NewProduct.filter(item => item.quantity > 0))
+    }
+  }
 
-  }
-  function handleOnMinus(productId) {
-    let NewProduct = product.map(item => {
-      if (item.id === productId) {
-        return {
-          ...item,
-          quantity: item.quantity - 1
-        }
-      }
-      else {
-        return item
-      }
-    })
-    //如果品項quantity變成0，不出現在cart內
-    setProducts(NewProduct.filter(item => item.quantity > 0))
-  }
   return (
     <section className='cart-container'>
       <ShopCartStyle>
         <h3 className='cart-title'>購物籃</h3>
         <section className='product-list' data-total-price='0'>
-          <Product data={product} onClickPlus={handleOnPlus} onClickMinus={handleOnMinus} />
+          <Product data={product} onClick={handleOnClick} />
         </section>
         <section className='cart-info shipping'>
           <div className='text'>運費</div>
