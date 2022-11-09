@@ -1,5 +1,5 @@
-import plusIcon from '../../../icons/plus.svg'
-import minusIcon from '../../../icons/minus.svg'
+import plusIcon from '../../../../icons/plus.svg'
+import minusIcon from '../../../../icons/minus.svg'
 import styled from 'styled-components'
 const ProductStyle = styled.div`
 display: flex ;

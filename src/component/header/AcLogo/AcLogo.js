@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import acLogo from '../../icons/logo.svg'
-import shopLogo from '../../icons/shop.svg'
+import acLogo from '../../../icons/logo.svg'
+import shopLogo from '../../../icons/shop.svg'
 const AClogoStyle = styled.div`
   width: 100% ;
 .header-logo-container {
@@ -26,7 +26,7 @@ const AClogoStyle = styled.div`
 
 `
 
-function AcLogo () {
+function AcLogo() {
   return (
     <AClogoStyle>
       <a className='header-logo-container' href='#'>

@@ -1,8 +1,8 @@
-import acLogo from '../icons/logo.svg'
-import shopLogo from '../icons/shop.svg'
-import facebookIcon from '../icons/facebook.svg'
-import InstagramIcon from '../icons/instagram.svg'
-import whatsappIcon from '../icons/whatsapp.svg'
+import acLogo from '../../icons/logo.svg'
+import shopLogo from '../../icons/shop.svg'
+import facebookIcon from '../../icons/facebook.svg'
+import InstagramIcon from '../../icons/instagram.svg'
+import whatsappIcon from '../../icons/whatsapp.svg'
 
 import styled from 'styled-components'
 const FooterStyle = styled.div`

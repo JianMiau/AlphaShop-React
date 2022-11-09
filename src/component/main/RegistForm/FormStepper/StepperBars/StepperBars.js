@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import completeLogo from '../../../../icons/pg-complete.svg'
+import completeLogo from '../../../../../icons/pg-complete.svg'
 const StepperBarStyle = styled.div`
 margin: 0;
 position: relative ;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import toggleIcon from '../../icons/toggle.svg'
+import toggleIcon from '../../../icons/toggle.svg'
 const ToggleStyle = styled.div`
   display: flex ;
   width: 100% ;
@@ -15,7 +15,7 @@ const ToggleStyle = styled.div`
  
 `
 
-function NavToggle () {
+function NavToggle() {
   return (
     <>
       <ToggleStyle>

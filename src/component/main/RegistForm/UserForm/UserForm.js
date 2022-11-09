@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const FormStyle = styled.div`
 width: 100% ;
 `
-function UserForm (props) {
+function UserForm(props) {
   return (
     <FormStyle>
       <section className='form-container'>

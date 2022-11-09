@@ -1,8 +1,8 @@
 import NavList from './NavList/NavList'
 import NavLogo from './NavLogo/NavLogo'
 import AcLogo from './AcLogo/AcLogo'
-import styled from 'styled-components'
 import NavToggle from './NavToggle/NavToggle'
+import styled from 'styled-components'
 const HeaderStyle = styled.div`
  width: 100% ;
  height: 100% ;
@@ -15,7 +15,7 @@ const HeaderStyle = styled.div`
    padding: 0 11.45%;
   }
 `
-function Header (props) {
+function Header(props) {
   return (
     <header className='header'>
       <HeaderStyle>

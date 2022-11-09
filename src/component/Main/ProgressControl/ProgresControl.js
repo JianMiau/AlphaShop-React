@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import rightArrow from '../../icons/right-arrow.svg'
+import rightArrow from '../../../icons/right-arrow.svg'
 const ProgressStyle = styled.div`
 width: 100%;
 padding-bottom: 50px;
