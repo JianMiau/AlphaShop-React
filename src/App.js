@@ -1,4 +1,4 @@
-
+import { useState } from 'react'
 import Header from './component/Header/Header'
 import Main from './component/Main/Main'
 import Footer from './component/Footer/Footer'
@@ -24,12 +24,14 @@ const AppStyle = styled.div`
     width: 100% ;
   }
 `
-
-function App () {
+//規格要求在App.js設置useState
+function App() {
+  // setFunction 命名記得用前面變數加上set
+  const [pageStep, setPageStep] = useState(1)
   return (
     <AppStyle>
       <Header />
-      <Main />
+      <Main step={pageStep} onClick={setPageStep} />
       <Footer />
     </AppStyle>
   )

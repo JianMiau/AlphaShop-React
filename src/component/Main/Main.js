@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import RegistForm from './RegistForm/RegistForm'
 import ProgressControl from './ProgressControl/ProgresControl'
 import ShopCart from './ShopCart/ShopCart'
-import { useState } from 'react'
 
 const MainStyle = styled.div`
 width: 100%;
@@ -44,17 +43,14 @@ width: 100%;
 }
 
 `
-function Main () {
-  // setFunction 命名記得用前面變數加上set
-  const [pageStep, setPageStep] = useState(1)
+function Main(props) {
   return (
-
     <div className='main'>
       <MainStyle>
         <div className='main-container'>
-          <RegistForm title='結帳' step={pageStep} />
+          <RegistForm title='結帳' step={props.step} />
           <ShopCart />
-          <ProgressControl step={pageStep} event={setPageStep} />
+          <ProgressControl step={props.step} onClick={props.onClick} />
         </div>
       </MainStyle>
     </div>
