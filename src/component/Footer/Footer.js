@@ -4,6 +4,7 @@ import facebookIcon from '../../icons/facebook.svg'
 import InstagramIcon from '../../icons/instagram.svg'
 import whatsappIcon from '../../icons/whatsapp.svg'
 
+
 import styled from 'styled-components'
 const FooterStyle = styled.div`
 width: 100%;

@@ -24,7 +24,7 @@ const AppStyle = styled.div`
     width: 100% ;
   }
 `
-//規格要求在App.js設置useState
+//規格要求在App.js設置useState控制表單
 function App() {
   // setFunction 命名記得用前面變數加上set
   const [pageStep, setPageStep] = useState(1)
