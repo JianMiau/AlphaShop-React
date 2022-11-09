@@ -14,6 +14,7 @@ position: relative ;
     display: flex ;
     align-items: center ;
     margin-right: 5px ;
+    /*如果頁面步驟大於該頁step代表已完成表單，不出現步驟號碼*/
     & .text p {
       width: 24px;
       height: 24px;
@@ -29,6 +30,7 @@ position: relative ;
     width: 80% ;
     display: none ;
   }
+   /*如果頁面步驟大於該頁step代表已完成表單，出現完成勾勾圖示*/
   & .complete-logo {
     display:${props => props.step > props.stepNumber ? 'block' : 'none'};
   }
@@ -62,7 +64,7 @@ position: relative ;
 `
 // stpper 變換邏輯主要要父層state傳進來的參數來判斷，再把它傳入style-component做變化
 // props.stepNumber是元件本身的號碼、props.step是目前頁面狀態
-function StepperBars (props) {
+function StepperBars(props) {
   return (
     <StepperBarStyle active={props.active} step={props.step} stepNumber={props.stepNumber}>
       <span className='progress-group'>
