@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Product from './Product/Product'
 import styled from 'styled-components'
 const ShopCartStyle = styled.div`
@@ -29,7 +30,7 @@ box-sizing: border-box ;
     padding: 32px 24px;
   }
 `
-const products = [
+const initialProducts = [
   {
     id: '1',
     name: '貓咪罐罐',
@@ -46,13 +47,51 @@ const products = [
   }
 ]
 
-function ShopCart () {
+function ShopCart() {
+  //主要父元件設置狀態
+  const [product, setProducts] = useState(initialProducts)
+  const copyProduct = Array.from(product) //先複製一份，使用mutate操作
+  //總金額可以用狀態product資料去做計算
+  let totalPrice = 0
+  copyProduct.forEach(data => {
+    totalPrice += data.quantity * data.price
+  })
+  // 按紐onClick事件handler
+  function handleOnPlus(productId) {
+    setProducts(product.map(item => {
+      if (item.id === productId) {
+        return {
+          ...item,
+          quantity: item.quantity + 1
+        }
+      }
+      else {
+        return item
+      }
+    }))
+
+  }
+  function handleOnMinus(productId) {
+    let NewProduct = product.map(item => {
+      if (item.id === productId) {
+        return {
+          ...item,
+          quantity: item.quantity - 1
+        }
+      }
+      else {
+        return item
+      }
+    })
+    //如果品項quantity變成0，不出現在cart內
+    setProducts(NewProduct.filter(item => item.quantity > 0))
+  }
   return (
     <section className='cart-container'>
       <ShopCartStyle>
         <h3 className='cart-title'>購物籃</h3>
         <section className='product-list' data-total-price='0'>
-          <Product data={products} />
+          <Product data={product} onClickPlus={handleOnPlus} onClickMinus={handleOnMinus} />
         </section>
         <section className='cart-info shipping'>
           <div className='text'>運費</div>
@@ -60,7 +99,7 @@ function ShopCart () {
         </section>
         <section className='cart-info total'>
           <div className='text'>小計</div>
-          <div className='price'>${5298}</div>
+          <div className='price'>${totalPrice}</div>
         </section>
       </ShopCartStyle>
 
