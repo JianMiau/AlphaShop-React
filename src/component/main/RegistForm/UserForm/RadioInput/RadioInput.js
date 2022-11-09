@@ -38,11 +38,11 @@ width: ${(props) => props.width}% ;
 }
 `
 
-function RadioInput (props) {
+function RadioInput(props) {
   return (
     <InputStyle width={props.width}>
       <label className='radio-group' data-price='0'>
-        <input id='shipping-standard' type='radio' name='shipping' />
+        <input id='shipping-standard' type='radio' name='shipping' defaultChecked={props.check} />
         <div className='radio-info'>
           <div className='radio-title'>
             <div className='radio-text'>{props.title}</div>
