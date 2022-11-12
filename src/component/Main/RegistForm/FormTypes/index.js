@@ -3,7 +3,7 @@ import AddressForm from './AddressForm'
 import ShippingForm from './ShippingForm'
 import CreditCardForm from './CreditCardForm'
 
-function UserForm(props) {
+function FormTypes(props) {
   return (
     <section className='form-container'>
       {props.step === 1 && <AddressForm />}
@@ -12,4 +12,4 @@ function UserForm(props) {
     </section>
   )
 }
-export default UserForm
+export default FormTypes

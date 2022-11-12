@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import InputContainerStyle from "../../../../Styles/Common/InputContainerStyle"
-const InputSelectStyle = styled(InputContainerStyle)`
+const SelectInputWrapStyle = styled(InputContainerStyle)`
 /*select title 畫面對齊*/
 .input-label {
   position: relative;
@@ -20,4 +20,4 @@ const InputSelectStyle = styled(InputContainerStyle)`
   }
   }
 `
-export default InputSelectStyle
+export default SelectInputWrapStyle

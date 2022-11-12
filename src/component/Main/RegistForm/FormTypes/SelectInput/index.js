@@ -1,8 +1,8 @@
-import InputSelectStyle from "./InputSelectStyle"
+import SelectInputWrapStyle from "./SelectInputWrapStyle"
 
 function SelectInput(props) {
   return (
-    <InputSelectStyle width={props.width}>
+    <SelectInputWrapStyle width={props.width}>
       <div className='input-group'>
         <div className='input-label'>{props.label}</div>
         <div className='select-container'>
@@ -11,7 +11,7 @@ function SelectInput(props) {
           </select>
         </div>
       </div>
-    </InputSelectStyle>
+    </SelectInputWrapStyle>
   )
 }
 export default SelectInput

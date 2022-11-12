@@ -10,7 +10,7 @@ width: 100%;
     /*grid排版網格基本大小需要包含gap*/ /*也要注意padding不然區塊會脫版*/
     display: grid ;
     grid-template-columns: minmax(362px,6fr) minmax(50px,1fr)  minmax(278px,4fr);
-    grid-template-rows: auto 200px ;
+    grid-template-rows: auto 250px ;
     column-gap: 20px;
     padding: 0 6.45% ;
   & .register-container {

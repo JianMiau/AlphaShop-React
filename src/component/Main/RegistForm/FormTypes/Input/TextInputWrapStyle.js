@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import InputContainerStyle from '../../../../Styles/Common/InputContainerStyle'
 
-const InputTextStyle = styled(InputContainerStyle)`
+const TextInputWrapStyle = styled(InputContainerStyle)`
 input {
    font-size: 1.5rem ;
     color:#808080;
@@ -11,4 +11,4 @@ input {
     height: 40px ;
 }
 `
-export default InputTextStyle
+export default TextInputWrapStyle

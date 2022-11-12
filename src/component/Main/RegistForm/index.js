@@ -1,5 +1,5 @@
-import FormStepper from './FormStepper/FormStepper'
-import UserForm from './FormTypes'
+import FormStepper from './FormStepper'
+import FormTypes from './FormTypes'
 import RegistFormStyle from './RegistFormStyle.js'
 
 
@@ -9,7 +9,7 @@ function RegistForm(props) {
       <section className='register-container'>
         <h2 className='register-title'>{props.title}</h2>
         <FormStepper step={props.step} />
-        <UserForm step={props.step} />
+        <FormTypes step={props.step} />
       </section>
     </RegistFormStyle>
   )
