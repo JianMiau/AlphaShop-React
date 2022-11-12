@@ -48,9 +48,10 @@ const ProductBtnStyle = styled.div`
   display: flex ;
   font-size: 1.4rem ;
   & button {
-    width: 27px ;
-    height: 27px ;
-    line-height: 33px ;
+    width: 24px ;
+    height: 24px ;
+    line-height: 24px ;
+    padding: 5px ;
     border-radius: 50% ;
     border: transparent ;
     & :hover {

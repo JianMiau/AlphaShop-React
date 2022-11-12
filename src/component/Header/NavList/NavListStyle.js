@@ -3,7 +3,6 @@ const NavListStyle = styled.div`
  display: none ;
  width: 100%;
  .nav-list{
-  list-style: none ;
   display: flex ;
   padding: 0;
  }
