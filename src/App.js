@@ -1,15 +1,11 @@
 import { useState } from 'react'
-import Header from './component/Header/Header'
-import Main from './component/Main/Main'
-import Footer from './component/Footer/Footer'
+import Header from './component/Header'
+import Main from './component/Main'
+import Footer from './component/Footer'
 import styled from 'styled-components'
+import ResetStyle from './component/Styles/GlobalStyle/ResetStyle'
+// 使用styled-components
 const AppStyle = styled.div`
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  font-size: 62.5% ;
-  margin: 0 ;
-  padding: 0 ;
   .header {
     width: 100% ;
     height: 60px ;
@@ -30,6 +26,7 @@ function App() {
   const [pageStep, setPageStep] = useState(1)
   return (
     <AppStyle>
+      <ResetStyle />
       <Header />
       <Main step={pageStep} onClick={setPageStep} />
       <Footer />
