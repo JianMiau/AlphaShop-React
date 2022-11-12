@@ -2,23 +2,20 @@ import styled from 'styled-components'
 const RadioInputWrapStyle = styled.div`
 margin:0 ;
 width: ${(props) => props.width}% ;
-/*Radio input選取到的樣式*/ 
-& .radio-group:checked {
-  border: 3px solid black ;
-  color: black;
-}
+
 /*Radio表單和上面Form-title距離*/
   padding-top: 24px ;
 & .radio-group {
   height: 60px;
   display: flex ;
-  border: 3px solid grey ;
-  color: grey;
+  border: 3px solid black ;
+  color: black;
   border-radius: 4px ;
-  /* margin-bottom: 15px ; */
-  padding: 7px 13px;
+  margin-bottom: 15p 13px;
   display: flex ;
   align-items: center ;
+  padding: 7px;
+
 & input[type=radio] {
   width: 1.5rem ;
   height: 1.5rem ;

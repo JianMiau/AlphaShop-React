@@ -1,8 +1,8 @@
 import RadioInputWrapStyle from "./RadioInputWrapStyle"
 function RadioInput(props) {
   return (
-    <RadioInputWrapStyle width={props.width}>
-      <label className='radio-group' data-price='0' htmlFor="#shipping-standard">
+    <RadioInputWrapStyle width={props.width} >
+      <label className='radio-group' data-price='0' htmlFor="shipping-standard">
         <input id='shipping-standard' type='radio' name='shipping' defaultChecked={props.check} />
         <div className='radio-info'>
           <div className='radio-title'>

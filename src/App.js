@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Header from './component/Header/Header'
+import Header from './component/Header'
 import Main from './component/Main'
-import Footer from './component/Footer/Footer'
+import Footer from './component/Footer'
 import styled from 'styled-components'
 import ResetStyle from './component/Styles/GlobalStyle/ResetStyle'
 // 使用styled-components
