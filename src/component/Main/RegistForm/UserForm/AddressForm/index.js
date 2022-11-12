@@ -1,25 +1,7 @@
-import Input from '../Input/Input'
-import styled from 'styled-components'
-import SelectInput from '../SelectInput/SelectInput'
-const FormStyle = styled.div`
-font-size: 1rem ;
-width: 100% ;
-padding: 3% 0;
-& .form {
-  display: flex ;
-  flex-direction: column ;
-}
-& .form-title {
-  font-size: 2.4rem ;
-}
-& .form-row {
-  width: 100% ;
-  display: flex ;
-  & >*{
-    border-radius: 25px ;
-  }
-}
-`
+import Input from '../Input'
+import SelectInput from '../SelectInput'
+import FormStyle from '../../../../Styles/Common/FormStyle'
+
 const gender = [
   { id: 'mr', title: '先生' },
   { id: 'ms', title: '小姐' },
@@ -35,7 +17,7 @@ const location = [
   { id: 'HSC', title: '新竹市' },
   { id: 'TXG', title: '台中市' }
 ]
-function AddressForm () {
+function AddressForm() {
   return (
     <FormStyle>
       <form className='form' data-phase='address'>

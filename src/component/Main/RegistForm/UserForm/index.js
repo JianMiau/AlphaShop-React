@@ -1,7 +1,7 @@
 
-import AddressForm from './AddressForm/AddressForm'
-import ShippingForm from './ShippingForm/ShippingForm'
-import CreditCardForm from './CreditCardForm/CreditCardFrom'
+import AddressForm from './AddressForm'
+import ShippingForm from './ShippingForm'
+import CreditCardForm from './CreditCardForm'
 import styled from 'styled-components'
 const FormStyle = styled.div`
 width: 100% ;

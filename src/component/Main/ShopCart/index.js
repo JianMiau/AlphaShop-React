@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Product from './Product/Product'
+import Product from './Product'
 import styled from 'styled-components'
 const ShopCartStyle = styled.div`
 width: 100% ;

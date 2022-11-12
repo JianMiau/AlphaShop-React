@@ -26,7 +26,7 @@ width: ${props => props.width}% ;
 
 `
 
-function SelectInput (props) {
+function SelectInput(props) {
   return (
     <InputStyle width={props.width}>
       <div className='input-group'>

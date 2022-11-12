@@ -1,6 +1,6 @@
 import FormStepper from './FormStepper/FormStepper'
 import styled from 'styled-components'
-import UserForm from './UserForm/UserForm'
+import UserForm from './UserForm'
 
 const FormStyle = styled.div`
 width: 100%;
