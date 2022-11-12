@@ -6,8 +6,6 @@ width: 100%;
   display: flex ;
   flex-direction: column ;
   padding:0 3% ;
-}
- 
   @media (min-width: 800px) {
     /*grid排版網格基本大小需要包含gap*/ /*也要注意padding不然區塊會脫版*/
     display: grid ;
@@ -15,15 +13,15 @@ width: 100%;
     grid-template-rows: auto 200px ;
     column-gap: 20px;
     padding: 0 6.45% ;
-    .register-container {
+  & .register-container {
     grid-column: 1/2 ;
     grid-row: 1/2 ;
   }
-  .progress-control-container {
+  & .progress-control-container {
     grid-column: 1/2 ;
     grid-row: 2/3 ;
   }
-  .cart-container {
+  & .cart-container {
     grid-column: 3/4; 
     grid-row: 1/3 ;
     padding-top: 166px ;
@@ -34,6 +32,8 @@ width: 100%;
      column-gap: 30px;
      padding: 0 11.45% ;
   }
+}
+ 
 `
 
 export default MainStyle

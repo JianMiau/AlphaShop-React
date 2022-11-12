@@ -7,7 +7,8 @@ input {
     color:#808080;
     padding: 12px 16px;
     border-radius:10px;
-    height: 67px ;
+    /*表格高度*/
+    height: 40px ;
 }
 `
 export default InputTextStyle
