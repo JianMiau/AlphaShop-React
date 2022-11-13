@@ -1,4 +1,4 @@
-import toggleIcon from '../../../icons/toggle.svg'
+import toggleIcon from '@/icons/toggle.svg'
 import NavToggleStyle from './NavToggleStyle'
 
 function NavToggle() {

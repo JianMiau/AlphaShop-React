@@ -1,5 +1,5 @@
 import ProgressControlStyle from "./ProgressControlStyle.js"
-import rightArrow from '../../../icons/right-arrow.svg'
+import rightArrow from '@/icons/right-arrow.svg'
 function ProgressControl(props) {
 
   const stepCopy = props.step
