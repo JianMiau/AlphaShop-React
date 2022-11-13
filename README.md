@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <img width="993" alt="A4-basic" src="https://user-images.githubusercontent.com/71853581/200102178-2387845b-9023-4577-a5c3-d7b962044e2f.png"> 
 
 ## 專案A5檔案重構-style-component CSS邏輯分流     
-1. 原本元件資料夾都以該元件名稱命名，改為index.js。  
+1. 原本元件資料js檔以該元件名稱命名，改為index.js。 (也可以使用.jsx 會變成React醒目圖示，有助於區分styled-component JS檔)  
 2. styled-components CSS管理部分獨立出，以檔名style結尾區分。
 3. Component資料夾中新增 Styles--Common 主要是放共用樣式部分(像表單FormStyle)。  
 4. Componnent資料夾中新增 Styles--Global 主要是利用createGlobalStyled，來設置全域的reset CSS樣式。
