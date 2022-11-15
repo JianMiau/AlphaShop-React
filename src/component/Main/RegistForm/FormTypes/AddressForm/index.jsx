@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 
 const gender = [
+  { id: 'default', title: '性別' },
   { id: 'mr', title: '先生' },
   { id: 'ms', title: '小姐' },
   { id: 'mx', title: '不明' }
@@ -29,7 +30,7 @@ function AddressForm() {
         <h3 className='form-title'>寄送地址</h3>
         <section className='form-body'>
           <div className='form-row'>
-            <SelectInput width={35} label='稱謂' data={gender} event={setInput} name='title' input={input} />
+            <SelectInput width={35} label='稱謂' data={gender} event={setInput} name='title' input={input} defaultValue={'先生'} />
             <Input width={65} label='姓名' type='text' placeholder='請輸入姓名' event={setInput} name='name' input={input} />
           </div>
           <div className='form-row'>
