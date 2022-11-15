@@ -5,7 +5,7 @@ function Input(props) {
     <TextInputWrapStyle width={props.width} marginRight={props.right}>
       <div className='input-group'>
         <div className='input-label'>{props.label}</div>
-        <input type={props.type} placeholder={props.placeholder} maxLength={props.maxlength} />
+        <input type={props.type} placeholder={props.placeholder} maxLength={props.maxlength} name={props.name} />
       </div>
     </TextInputWrapStyle>
 
