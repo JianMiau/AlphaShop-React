@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 
 const gender = [
-  { id: 'default', title: '性別' },
+  { id: 'default', title: '稱謂' },
   { id: 'mr', title: '先生' },
   { id: 'ms', title: '小姐' },
   { id: 'mx', title: '不明' }
@@ -23,7 +23,6 @@ const location = [
 function AddressForm() {
   // 紀錄表單輸入時資料(受控表單元件模式)
   const [input, setInput] = useState({})
-  console.log(input)
   return (
     <FormStyle>
       <form className='form' data-phase='address'>
