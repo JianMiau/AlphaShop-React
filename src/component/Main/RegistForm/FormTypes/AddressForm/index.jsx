@@ -1,6 +1,7 @@
 import Input from '../Input'
 import SelectInput from '../SelectInput'
-import FormStyle from '../../../../Styles/Common/FormStyle'
+import FormStyle from '@/component/Styles/Common/FormStyle'
+import { useState } from 'react'
 
 
 const gender = [
@@ -19,22 +20,25 @@ const location = [
   { id: 'TXG', title: '台中市' }
 ]
 function AddressForm() {
+  // 紀錄表單輸入時資料(受控表單元件模式)
+  const [input, setInput] = useState({})
+  console.log(input)
   return (
     <FormStyle>
       <form className='form' data-phase='address'>
         <h3 className='form-title'>寄送地址</h3>
         <section className='form-body'>
           <div className='form-row'>
-            <SelectInput width={35} label='稱謂' data={gender} />
-            <Input width={65} label='姓名' type='text' placeholder='請輸入姓名' />
+            <SelectInput width={35} label='稱謂' data={gender} event={setInput} name='title' input={input} />
+            <Input width={65} label='姓名' type='text' placeholder='請輸入姓名' event={setInput} name='name' input={input} />
           </div>
           <div className='form-row'>
-            <Input width={48} right={2} label='電話' type='tel' placeholder='請輸入電話' />
-            <Input width={50} label='E-mail' type='email' placeholder='請輸入信箱' />
+            <Input width={48} right={2} label='電話' type='tel' placeholder='請輸入電話' event={setInput} name='tel' input={input} />
+            <Input width={50} label='E-mail' type='email' placeholder='請輸入信箱' event={setInput} name='email' input={input} />
           </div>
           <div className='form-row'>
-            <SelectInput width={35} label='縣市' data={location} />
-            <Input width={65} label='地址' type='adress' placeholder='請輸入地址' />
+            <SelectInput width={35} label='縣市' data={location} event={setInput} name='city' input={input} />
+            <Input width={65} label='地址' type='adress' placeholder='請輸入地址' event={setInput} name='address' input={input} />
           </div>
         </section>
       </form>
