@@ -3,13 +3,15 @@ const RadioInputWrapStyle = styled.div`
 margin:0 ;
 width: ${(props) => props.width}% ;
 
+
 /*Radio表單和上面Form-title距離*/
   padding-top: 24px ;
 & .radio-group {
   height: 60px;
   display: flex ;
-  border: 3px solid black ;
-  color: black;
+  /*選到時才變黑色*/
+  border: 3px solid ${props => props.check ? 'black' : 'FFFFFF'} ;
+  color: ${props => props.check ? 'black' : 'grey'};
   border-radius: 4px ;
   margin-bottom: 15p 13px;
   display: flex ;
