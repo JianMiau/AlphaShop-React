@@ -2,8 +2,6 @@ import ProgressControlStyle from "./ProgressControlStyle.js"
 import rightArrow from '@/icons/right-arrow.svg'
 import { useFormData, useFormDispatch } from '@/component/Context/FormContext'
 function ProgressControl(props) {
-
-  // const stepCopy = props.step
   const CurrentStep = useFormData().currentPage
   const dispatch = useFormDispatch()
   // 下一步按鈕
@@ -22,7 +20,7 @@ function ProgressControl(props) {
   return (
     <section className='progress-control-container'>
       <ProgressControlStyle step={CurrentStep}>
-        <section className='button-group' data-phase={props.phase}>
+        <section className='button-group'>
           <button className='pre' onClick={onClickPreBtn}>
             上一步
           </button>

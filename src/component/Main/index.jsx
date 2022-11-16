@@ -10,7 +10,7 @@ function Main(props) {
         <div className='main-container'>
           <RegistForm title='結帳' step={props.step} />
           <ShopCart />
-          <ProgressControl step={props.step} onClick={props.onClick} />
+          <ProgressControl />
         </div>
       </MainStyle>
     </div>
