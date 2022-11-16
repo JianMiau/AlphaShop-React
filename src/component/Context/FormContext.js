@@ -7,11 +7,11 @@ const FormDispatchContext = createContext(null);
 const initialFormStatus = {
   // 現在表單的頁數
   currentPage: 1,
-  // 表單儲存資料用
+  // 表單儲存資料用，需要設定初始值，不能出現undefine會噴錯
   form: {
-    1: {},
+    1: { title: '', name: '', tel: '', email: '', city: '', address: '' },
     2: { shipping: 'standard' },
-    3: {},
+    3: { cardTitle: '', cardValidDate: '', cardNumber: '', cardCCV: '' },
   }
 }
 
@@ -19,7 +19,6 @@ const initialFormStatus = {
 export function FormProvider(props) {
   // useReducer 參數1=reducer function 參數2=初始狀態
   const [formData, dispatch] = useImmerReducer(formReducer, initialFormStatus)
-  console.log(formData)
   return (
     <FormContext.Provider value={formData}>
       <FormDispatchContext.Provider value={dispatch}>

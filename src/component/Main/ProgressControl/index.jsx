@@ -2,30 +2,46 @@ import ProgressControlStyle from "./ProgressControlStyle.js"
 import rightArrow from '@/icons/right-arrow.svg'
 import { useFormData, useFormDispatch } from '@/component/Context/FormContext'
 function ProgressControl(props) {
-  const CurrentStep = useFormData().currentPage
+  const currentStep = useFormData().currentPage
+  const formData = useFormData().form
   const dispatch = useFormDispatch()
   // 下一步按鈕
   function onClickNextBtn() {
-    if (CurrentStep < 3) {
-      dispatch({ type: 'nextPage', pageNumber: CurrentStep })
+    if (currentStep < 3) {
+      dispatch({ type: 'nextPage', pageNumber: currentStep })
     }
-    else if (CurrentStep === 3) {
-      alert('已經確認下單~感謝您的光顧')
+    else if (currentStep === 3) {
+      const name = formData[1].name
+      const address = formData[1].address
+      const shipping = formData[2].shipping
+      const cardTitle = formData[3].cardTitle
+      const cardNumber = formData[3].cardNumber
+      const cardValidDate = formData[3].cardValidDate
+      const cardCCV = formData[3].cardCCV
+      alert(`聯絡資訊----------
+      \r姓名: ${name}
+      \r運送地址: ${address}
+      \r運送方式: ${shipping}
+      \r付款資訊----------
+      \r卡片持有人: ${cardTitle}
+      \r卡號: ${cardNumber}
+      \r卡片到期日: ${cardValidDate}
+      \r安全碼: ${cardCCV}`)
     }
   }
   function onClickPreBtn() {
     // 表單頁數狀態設定
-    dispatch({ type: 'previousPage', pageNumber: CurrentStep })
+    dispatch({ type: 'previousPage', pageNumber: currentStep })
   }
   return (
     <section className='progress-control-container'>
-      <ProgressControlStyle step={CurrentStep}>
+      <ProgressControlStyle step={currentStep}>
         <section className='button-group'>
           <button className='pre' onClick={onClickPreBtn}>
             上一步
           </button>
           <button className='next' onClick={onClickNextBtn}>
-            {CurrentStep !== 3 ? <div>下一步 <img src={rightArrow} alt='right-arrow' /></div> : '確認下單'}
+            {currentStep !== 3 ? <div>下一步 <img src={rightArrow} alt='right-arrow' /></div> : '確認下單'}
           </button>
         </section>
       </ProgressControlStyle>
