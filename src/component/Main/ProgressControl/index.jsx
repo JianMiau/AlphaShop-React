@@ -1,10 +1,12 @@
 import ProgressControlStyle from "./ProgressControlStyle.js"
 import rightArrow from '@/icons/right-arrow.svg'
 import { useFormData, useFormDispatch } from '@/component/Context/FormContext'
+import { useCartData } from '@/component/Context/CartContext'
 function ProgressControl(props) {
   const currentStep = useFormData().currentPage
   const formData = useFormData().form
   const dispatch = useFormDispatch()
+  const cartData = useCartData()
   // 下一步按鈕
   function onClickNextBtn() {
     if (currentStep < 3) {
@@ -18,6 +20,7 @@ function ProgressControl(props) {
       const cardNumber = formData[3].cardNumber
       const cardValidDate = formData[3].cardValidDate
       const cardCCV = formData[3].cardCCV
+      const totalPrice = cartData.find(item => item.id === 'total').totalPrice
       alert(`聯絡資訊----------
       \r姓名: ${name}
       \r運送地址: ${address}
@@ -26,7 +29,9 @@ function ProgressControl(props) {
       \r卡片持有人: ${cardTitle}
       \r卡號: ${cardNumber}
       \r卡片到期日: ${cardValidDate}
-      \r安全碼: ${cardCCV}`)
+      \r安全碼: ${cardCCV}
+      \r--------------
+      \r本次消費總金額: ${totalPrice}`)
     }
   }
   function onClickPreBtn() {
