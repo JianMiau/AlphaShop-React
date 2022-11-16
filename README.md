@@ -6,10 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <img width="993" alt="A4-basic" src="https://user-images.githubusercontent.com/71853581/200102178-2387845b-9023-4577-a5c3-d7b962044e2f.png"> 
 
 ## 專案A5檔案重構-style-component CSS邏輯分流     
-1. 原本元件資料夾都以該元件名稱命名，改為index.js。  
+1. 原本元件資料js檔以該元件名稱命名，改為index.js。 (也可以使用.jsx 會變成React醒目圖示，有助於區分styled-component JS檔)  
 2. styled-components CSS管理部分獨立出，以檔名style結尾區分。
-3. Componnet資料夾中新增 Styles--Common 主要是放共用樣式部分(像表單FormStyle)。  
-4. Componnet資料夾中新增 Styles--Global 主要是利用createGlobalStyled，來設置全域的reset CSS樣式。
+3. Component資料夾中新增 Styles--Common 主要是放共用樣式部分(像表單FormStyle)。  
+4. Componnent資料夾中新增 Styles--Global 主要是利用createGlobalStyled，來設置全域的reset CSS樣式。
+5. 可以在webpack alias 路徑中將跟目錄設定為src出發，'@': path.reslove('src')，在資料夾太深時避免太長的相對路徑。
 
 ## 本次專案進度(A5)-表單頁面切換和購物車總價計算     
 1. 表單頁面切換的useState狀態設在App.js，再傳遞到Main.js，下一層的RegisForm、ProgressControll、以及進度條Stepper樣式變換。  
