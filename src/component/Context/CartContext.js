@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 import { useImmerReducer } from 'use-immer';
-// 創建ShopCart用到的Context，靜態資料和事件管理各一個
+// 創建ShopCart用到的Context，靜態資料和事件管理各一個，總價獨立一個
 const CartContext = createContext(null);
 const CartDispatchContext = createContext(null);
 // 初始化購物車資料
@@ -25,13 +25,11 @@ let totalPrice = 0
 initialCartStatus.forEach(item => {
   totalPrice += item.quantity * item.price
 })
-const addCartTotalPriceData = [...initialCartStatus, {
-  id: 'total', total: totalPrice
-}]
+initialCartStatus.push({ id: 'total', totalPrice: totalPrice })
 // 將CartContext包裝成Provider元件
 export function CartProvider(props) {
   // useReducer 參數1=reducer function 參數2=初始狀態
-  const [cartData, dispatch] = useImmerReducer(cartReducer, addCartTotalPriceData)
+  const [cartData, dispatch] = useImmerReducer(cartReducer, initialCartStatus)
   return (
     <CartContext.Provider value={cartData}>
       <CartDispatchContext.Provider value={dispatch}>
@@ -41,10 +39,10 @@ export function CartProvider(props) {
   )
 }
 // 導出自定義的use function，提供給內層元件使用，資料流=useCartData，事件流=useCartDispatch
-export function useFormData() {
+export function useCartData() {
   return useContext(CartContext)
 }
-export function useFormDispatch() {
+export function useCartDispatch() {
   return useContext(CartDispatchContext)
 }
 
@@ -75,7 +73,7 @@ function cartReducer(draft, action) {
       })
       // 更新新的總價
       const newTotal = draft.find(item => item.id === 'total')
-      newTotal.total = totalPrice
+      newTotal.totalPrice = totalPrice
       break
     }
 

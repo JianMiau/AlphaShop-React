@@ -34,18 +34,23 @@ function ProductBtn(props) {
 function Product(props) {
   return (
     <>
-      {props.data.map(item => (
-        <div className='product-container' key={item.id}>
-          <ProductStyle>
-            <ProductImage image={item.img} />
-            <div className='product-info'>
-              <div className='product-name'>{item.name}</div>
-              <div className='product-price'>${item.price}</div>
-              <ProductBtn count={item.quantity} productId={item.id} onClick={props.onClick} />
+      {props.data.map(item => {
+        if (item.id!=='total') {
+          return (
+            <div className='product-container' key={item.id}>
+              <ProductStyle>
+                <ProductImage image={item.img} />
+                <div className='product-info'>
+                  <div className='product-name'>{item.name}</div>
+                  <div className='product-price'>${item.price}</div>
+                  <ProductBtn count={item.quantity} productId={item.id} onClick={props.onClick} />
+                </div>
+              </ProductStyle>
             </div>
-          </ProductStyle>
-        </div>
-      ))}
+
+          )
+        }   
+})}
     </>
   )
 }
