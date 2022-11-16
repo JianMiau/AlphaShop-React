@@ -18,10 +18,10 @@ const initialFormStatus = {
 // 將FormContext包裝成Provider元件
 export function FormProvider(props) {
   // useReducer 參數1=reducer function 參數2=初始狀態
-  const [formData, setFormData] = useImmerReducer(formReducer, initialFormStatus)
+  const [formData, dispatch] = useImmerReducer(formReducer, initialFormStatus)
   return (
     <FormContext.Provider value={formData}>
-      <FormDispatchContext.Provider value={setFormData}>
+      <FormDispatchContext.Provider value={dispatch}>
         {props.children}
       </FormDispatchContext.Provider>
     </FormContext.Provider>
@@ -47,7 +47,7 @@ function formReducer(draft, action) {
     }
     case 'previousPage': {
       // draft更新下一頁pageNumber 
-      draft.currentPage = action.pageNumber + 1
+      draft.currentPage = action.pageNumber - 1
       break
     }
     case 'updateForm': {
