@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 import { useImmerReducer } from 'use-immer';
-// 創建ShopCart用到的Context，靜態資料和事件管理各一個，總價獨立一個
+// 創建ShopCart用到的Context，靜態資料和事件管理各一個
 const CartContext = createContext(null);
 const CartDispatchContext = createContext(null);
 // 初始化購物車資料
