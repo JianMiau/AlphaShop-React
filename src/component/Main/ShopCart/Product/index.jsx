@@ -47,10 +47,9 @@ function Product(props) {
                 </div>
               </ProductStyle>
             </div>
-
           )
         }
-        return 
+        return
       })}
     </>
   )

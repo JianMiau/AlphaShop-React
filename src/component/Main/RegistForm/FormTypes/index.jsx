@@ -7,7 +7,6 @@ import { useFormData } from '@/component/Context/FormContext.js'
 
 function FormTypes(props) {
   const step = useFormData().currentPage
-  console.log(`now on page: ${step}`)
   return (
     <section className='form-container'>
       {step === 1 && <AddressForm />}

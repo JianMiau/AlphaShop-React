@@ -8,7 +8,7 @@ function Main(props) {
     <div className='main'>
       <MainStyle>
         <div className='main-container'>
-          <RegistForm title='結帳' step={props.step} />
+          <RegistForm title='結帳' />
           <ShopCart />
           <ProgressControl />
         </div>
