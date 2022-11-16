@@ -16,6 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## 專案基本功能
 1. 最後點選送出表單時，會出現使用者名稱、寄送地址和方式、題目要求的卡片資訊和商品總價。
 2. 表單按上一步時，原本輸入資料不會重置。
+3. shipping表單點選DHL時，右方購物車運費顯示500，總價加500。
 
 
 ## Available Scripts
