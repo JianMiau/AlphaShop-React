@@ -20,7 +20,10 @@ function ProgressControl(props) {
       const cardNumber = formData[3].cardNumber
       const cardValidDate = formData[3].cardValidDate
       const cardCCV = formData[3].cardCCV
-      const totalPrice = cartData.find(item => item.id === 'total').totalPrice
+      let totalPrice = cartData.find(item => item.id === 'total').totalPrice
+      if (shipping === 'DHL') {
+        totalPrice += 500
+      }
       alert(`聯絡資訊----------
       \r姓名: ${name}
       \r運送地址: ${address}
