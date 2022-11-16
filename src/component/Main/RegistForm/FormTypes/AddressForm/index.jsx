@@ -26,7 +26,7 @@ function AddressForm() {
   const dispatch = useFormDispatch()
   // 紀錄表單輸入時資料(受控表單元件模式)
   const [input, setInput] = useState({})
-  // 將使用者資料更新至頂層Context狀儲除存，但覺得不是最好作法...每次onChange表單都重刷...但因為最後需要Progress Control透過Context來抓到使用者所有表單資料
+  // 將使用者資料更新至頂層Context狀態儲存，但覺得不是最好作法...每次onChange表單都重刷...但因為最後需要Progress Control透過Context來抓到使用者所有表單資料
   useEffect(() => {
     dispatch({ type: 'updateForm', text: input })
   }, [input])

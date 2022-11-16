@@ -19,6 +19,7 @@ const initialFormStatus = {
 export function FormProvider(props) {
   // useReducer 參數1=reducer function 參數2=初始狀態
   const [formData, dispatch] = useImmerReducer(formReducer, initialFormStatus)
+  console.log(formData)
   return (
     <FormContext.Provider value={formData}>
       <FormDispatchContext.Provider value={dispatch}>

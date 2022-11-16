@@ -1,11 +1,17 @@
 import RadioInput from '../RadioInput'
-import FormStyle from '../../../../Styles/Common/FormStyle'
+import FormStyle from '@/component/Styles/Common/FormStyle'
 import { useState } from 'react'
+import { useEffect } from 'react'
+import { useFormDispatch } from '@/component/Context/FormContext'
 
 
 function ShippingForm() {
+  const dispatch = useFormDispatch()
   // 紀錄表單輸入時資料(受控表單元件模式)
   const [input, setInput] = useState({ shipping: 'standard' })
+  useEffect(() => {
+    dispatch({ type: 'updateForm', text: input })
+  }, [input])
   return (
     <FormStyle>
       <form className='form' data-phase='shipping'>
