@@ -8,7 +8,7 @@ function Input(props) {
     <TextInputWrapStyle width={props.width} marginRight={props.right}>
       <div className='input-group'>
         <div className='input-label'>{props.label}</div>
-        <input type={props.type} placeholder={props.placeholder} maxLength={props.maxlength} name={props.name} onChange={(e) => { setInput({ ...input, [e.target.name]: e.target.value }) }} />
+        <input type={props.type} placeholder={props.placeholder} maxLength={props.maxlength} value={props.value} name={props.name} onChange={(e) => { setInput({ ...input, [e.target.name]: e.target.value }) }} />
       </div>
     </TextInputWrapStyle>
 

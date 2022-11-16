@@ -14,7 +14,7 @@ function SelectInput(props) {
               ...input,
               [e.target.name]: e.target.value
             })
-          }} >
+          }} value={props.value}>
             {props.data.map(item => <option key={item.id} value={item.title}>{item.title}</option>)}
           </select>
         </div>
