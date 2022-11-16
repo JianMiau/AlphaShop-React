@@ -1,8 +1,8 @@
 import RadioInput from '../RadioInput'
-import FormStyle from '@/component/Styles/Common/FormStyle'
+import FormStyle from '../../../../Styles/Common/FormStyle'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { useFormData, useFormDispatch } from '@/component/Context/FormContext'
+import { useFormData, useFormDispatch } from '../../../../Context/FormContext'
 
 
 function ShippingForm() {
