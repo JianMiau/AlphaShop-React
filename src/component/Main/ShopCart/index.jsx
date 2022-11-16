@@ -7,8 +7,12 @@ import { useFormData } from '@/component/Context/FormContext'
 function ShopCart() {
   const cartData = useCartData()
   const dispatch = useCartDispatch()
-  const totalPrice = cartData.find(item => item.id === 'total').totalPrice
+  let totalPrice = cartData.find(item => item.id === 'total').totalPrice
   const shippingType = useFormData().form[2].shipping
+  // 如果選擇DHL 運費+500
+  if (shippingType === 'DHL') {
+    totalPrice += 500
+  }
   // 按紐onClick事件handler (加減事件合併)
   function handleOnClick(productId, event) {
     //如果按到plus按鈕,要先取外層才抓得到data-set
