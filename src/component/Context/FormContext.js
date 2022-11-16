@@ -10,7 +10,7 @@ const initialFormStatus = {
   // 表單儲存資料用
   form: {
     1: {},
-    2: {},
+    2: { shipping: 'standard' },
     3: {},
   }
 }
