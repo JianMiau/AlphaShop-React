@@ -2,7 +2,8 @@ import Input from '../Input'
 import SelectInput from '../SelectInput'
 import FormStyle from '@/component/Styles/Common/FormStyle'
 import { useState } from 'react'
-
+import { useFormDispatch } from '@/component/Context/FormContext'
+import { useEffect } from 'react'
 
 const gender = [
   { id: 'default', title: '稱謂' },
@@ -21,8 +22,14 @@ const location = [
   { id: 'TXG', title: '台中市' }
 ]
 function AddressForm() {
+  // Context傳來的資料區
+  const dispatch = useFormDispatch()
   // 紀錄表單輸入時資料(受控表單元件模式)
   const [input, setInput] = useState({})
+  // 將使用者資料更新至頂層Context狀儲除存，但覺得不是最好作法...每次onChange表單都重刷...但因為最後需要Progress Control透過Context來抓到使用者所有表單資料
+  useEffect(() => {
+    dispatch({ type: 'updateForm', text: input })
+  }, [input])
   return (
     <FormStyle>
       <form className='form' data-phase='address'>

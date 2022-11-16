@@ -2,7 +2,7 @@ import StepperBars from './StepperBars'
 import FormStepperStyle from './FormStepperStyle'
 // stepper 變換只有讀取資料狀態，沒有事件觸發
 import { useFormData } from '@/component/Context/FormContext'
-// ex: active={props.step >= 2} 裡面傳boolean來判斷表單階段，用===判斷型別和數值
+// ex: active={step >= 2} 裡面傳boolean來判斷表單階段，用===判斷型別和數值
 function FormStepper(props) {
   const step = useFormData().currentPage
   return (
