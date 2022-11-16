@@ -5,19 +5,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # 目前專案畫面
 <img width="993" alt="A4-basic" src="https://user-images.githubusercontent.com/71853581/200102178-2387845b-9023-4577-a5c3-d7b962044e2f.png"> 
 
-## 專案A5檔案重構-style-component CSS邏輯分流     
-1. 原本元件資料js檔以該元件名稱命名，改為index.js。 (也可以使用.jsx 會變成React醒目圖示，有助於區分styled-component JS檔)  
-2. styled-components CSS管理部分獨立出，以檔名style結尾區分。
-3. Component資料夾中新增 Styles--Common 主要是放共用樣式部分(像表單FormStyle)。  
-4. Componnent資料夾中新增 Styles--Global 主要是利用createGlobalStyled，來設置全域的reset CSS樣式。
-5. 可以在webpack alias 路徑中將跟目錄設定為src出發，'@': path.reslove('src')，在資料夾太深時避免太長的相對路徑。
 
-## 本次專案進度(A5)-表單頁面切換和購物車總價計算     
-1. 表單頁面切換的useState狀態設在App.js，再傳遞到Main.js，下一層的RegisForm、ProgressControll、以及進度條Stepper樣式變換。  
-2. 確認下單後會跳出alert()，並回到首頁表單。
-3. 購物車useState狀態設定在ShopCart集中管理，並以商品資料作為起始預設資料。  
-4. 購物品項小於0時，會從購物車畫面中移除。  
-5. 加減按鈕事件設計很類似，button上面加上data-set屬性，利用事件分派區分內部功能。
+## 本次專案進度(A6)- 使用useContext做全域變數管理，useReducer做狀態管理     
+1. Component資料夾中新增Context，存放兩個全域變數管理檔案FormContext.js和CartContext.js  
+2. Context檔案中包裝成Provider元件 Component供給App.jsx調用。
+3. 利用useReducer Hook作動態事件管理，靜態資料由data context檔案去傳送。  
+4. 表單元件設定成自己有狀態的受控元件(controlled component)，即時記錄變動input值。
+5. 再用useEffect()設定input為相依變數，input有變動時推至Context檔案作資料更新。
+
+## 專案基本功能
+1. 最後點選送出表單時，會出現使用者名稱、寄送地址和方式、題目要求的卡片資訊和商品總價。
+2. 表單按上一步時，原本輸入資料不會重置。
+
 
 ## Available Scripts
 
