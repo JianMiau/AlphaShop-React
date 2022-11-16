@@ -3,7 +3,7 @@ import AddressForm from './AddressForm'
 import ShippingForm from './ShippingForm'
 import CreditCardForm from './CreditCardForm'
 // 這裡只有接收資料參數，無事件觸發
-import { useFormData } from '@/component/Context/FormContext.js'
+import { useFormData } from '../../../Context/FormContext'
 
 function FormTypes(props) {
   const step = useFormData().currentPage

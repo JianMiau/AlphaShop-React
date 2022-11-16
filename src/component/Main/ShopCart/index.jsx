@@ -1,8 +1,8 @@
 // import { useState } from 'react'
 import Product from './Product'
 import ShopCartStyle from './ShopCartStyle'
-import { useCartData, useCartDispatch } from '@/component/Context/CartContext'
-import { useFormData } from '@/component/Context/FormContext'
+import { useCartData, useCartDispatch } from '../../Context/CartContext'
+import { useFormData } from '../../Context/FormContext'
 
 function ShopCart() {
   const cartData = useCartData()

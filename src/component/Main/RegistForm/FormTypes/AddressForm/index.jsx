@@ -1,8 +1,8 @@
 import Input from '../Input'
 import SelectInput from '../SelectInput'
-import FormStyle from '@/component/Styles/Common/FormStyle'
+import FormStyle from '../../../../Styles/Common/FormStyle'
 import { useState } from 'react'
-import { useFormData, useFormDispatch } from '@/component/Context/FormContext'
+import { useFormData, useFormDispatch } from '../../../../Context/FormContext'
 import { useEffect } from 'react'
 
 const gender = [

@@ -1,7 +1,7 @@
 import Input from '../Input'
-import FormStyle from '@/component/Styles/Common/FormStyle'
+import FormStyle from '../../../../Styles/Common/FormStyle'
 import { useEffect, useState } from 'react'
-import { useFormData, useFormDispatch } from '@/component/Context/FormContext'
+import { useFormData, useFormDispatch } from '../../../../Context/FormContext'
 function CreditCardForm() {
   // Context傳來的資料區
   const dispatch = useFormDispatch()

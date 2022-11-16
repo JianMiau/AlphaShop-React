@@ -1,7 +1,7 @@
 import ProgressControlStyle from "./ProgressControlStyle.js"
-import rightArrow from '@/icons/right-arrow.svg'
-import { useFormData, useFormDispatch } from '@/component/Context/FormContext'
-import { useCartData } from '@/component/Context/CartContext'
+import rightArrow from '../../../icons/right-arrow.svg'
+import { useFormData, useFormDispatch } from '../../Context/FormContext'
+import { useCartData } from '../../Context/CartContext'
 function ProgressControl(props) {
   const currentStep = useFormData().currentPage
   const formData = useFormData().form

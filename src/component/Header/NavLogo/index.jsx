@@ -1,6 +1,6 @@
-import searchIcon from '@/icons/search.svg'
-import cartIcon from '@/icons/cart.svg'
-import moonIcon from '@/icons/moon.svg'
+import searchIcon from '../../../icons/search.svg'
+import cartIcon from '../../../icons/cart.svg'
+import moonIcon from '../../../icons/moon.svg'
 import NavLogoStyle from './NavLogoStyle'
 function NavLogo() {
   return (
