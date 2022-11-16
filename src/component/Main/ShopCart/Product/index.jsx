@@ -35,7 +35,7 @@ function Product(props) {
   return (
     <>
       {props.data.map(item => {
-        if (item.id!=='total') {
+        if (item.id !== 'total' && item.quantity > 0) {
           return (
             <div className='product-container' key={item.id}>
               <ProductStyle>
@@ -49,8 +49,8 @@ function Product(props) {
             </div>
 
           )
-        }   
-})}
+        }
+      })}
     </>
   )
 }
