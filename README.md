@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. 利用useReducer Hook作動態事件管理，靜態資料由data context檔案去傳送。  
 4. 表單元件設定成自己有狀態的受控元件(controlled component)，即時記錄變動input值。
 5. 再用useEffect()設定input為相依變數，input有變動時推至Context檔案作資料更新。
-
+5. 11/19 修改，發現dispatch totalPrice更新總價會導致畫面重新渲染，直接移到dispatch minus和dispatch plus合併。
 ## 專案基本功能
 1. 最後點選送出表單時，會出現使用者名稱、寄送地址和方式、題目要求的卡片資訊和商品總價。
 2. 表單按上一步時，原本輸入資料不會重置。
