@@ -18,12 +18,10 @@ function ShopCart() {
     //如果按到plus按鈕,要先取外層才抓得到data-set
     if (event.target.parentNode.dataset.id === "plus") {
       dispatch({ type: 'plus', id: productId })
-      dispatch({ type: 'updateTotalPrice' })
     }
     //如果按到minus按鈕
     else if (event.target.parentNode.dataset.id === "minus") {
       dispatch({ type: 'minus', id: productId })
-      dispatch({ type: 'updateTotalPrice' })
     }
   }
 

@@ -54,6 +54,15 @@ function cartReducer(draft, action) {
       // 商品數量加1
       const targetItem = draft.find(item => item.id === productId)
       targetItem.quantity++
+      let totalPrice = 0
+      draft.forEach(item => {
+        if (item.id !== 'total') {
+          totalPrice += item.quantity * item.price
+        }
+      })
+      // 更新新的總價
+      const newTotal = draft.find(item => item.id === 'total')
+      newTotal.totalPrice = totalPrice
       break
     }
     case 'minus': {
@@ -62,9 +71,6 @@ function cartReducer(draft, action) {
       // 商品數量加1
       const targetItem = draft.find(item => item.id === productId)
       targetItem.quantity--
-      break
-    }
-    case 'updateTotalPrice': {
       let totalPrice = 0
       draft.forEach(item => {
         if (item.id !== 'total') {
